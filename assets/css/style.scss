@@ -1,0 +1,300 @@
+//fonts
+$global-font: sans-serif;
+$global-font2: 'Open Sans';
+//colors
+$accent-400: hsla(201, 44%, 59%, 0.4);
+$accent-500: hsl(201, 44%, 59%);
+$accent-600: hsl(18, 36%, 51%);
+$neutral-100: hsl(0, 0%, 87%);
+$neutral-500: hsl(212, 14%, 19%);
+$neutral-600: hsl(228, 19%, 5%);
+$neutral-700: hsl(210, 3%, 13%);
+$scrollbar: rgb(95, 95, 95);
+$scrollbar-thumb: rgba(0, 0, 0, 0.5);
+//text colors
+$text-100: hsl(0, 0%, 100%);
+$text-200: hsl(0, 0%, 0%);
+$text-300: hsl(0, 0%, 25%);
+//shadows
+$shadow-100: hsl(0, 0%, 25%);
+$shadow-200: hsl(0, 0%, 100%);
+//gradients
+$gradient-100: linear-gradient(90deg, rgba(230, 230, 230, 1) 0%, rgba(51, 51, 51, 1) 50%, rgba(230, 230, 230, 1) 100%);
+
+#hero::after {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 130%;
+    height: 95%;
+
+    z-index: 0;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) rotate(0deg);
+}
+
+#hero::before {
+    content: '';
+    position: absolute;
+    left: 50%;
+    top: 0;
+    width: 100%;
+    height: 96%;
+    background: url("https://businessjournal.pl/wp-content/uploads/2019/08/architecture-buildings-city-373893.jpg") no-repeat;
+    object-fit: fill;
+    opacity: 0.5;
+    z-index: 0;
+    border-radius: 0 0 50% 50%;
+    transform: translateX(-50%) translateY(18px) rotate(2deg);
+}
+
+#hero {
+    width: 100%;
+    height: 90vh;
+    overflow: hidden;
+    position: relative;
+
+}
+
+body {
+    max-width: 100%;
+    color: $text-200;
+    background-color: $neutral-100;
+    transition: 1s;
+}
+
+html {
+    scroll-behavior: smooth;
+    transition: 0.5s;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,h4,h5,h6{
+    margin: 0;
+}
+
+::-webkit-scrollbar {
+    width: 10px;
+    background: $scrollbar-thumb;
+}
+
+::-webkit-scrollbar-thumb {
+    background-color: $scrollbar;
+    border-radius: 20px;
+}
+
+.container {
+    margin: 0 auto;
+}
+
+.navbar-main {
+    width: 100%;
+    height: 12vh;
+    background: rgba(105, 68, 139, 0.63);
+    
+    top: 0;
+    position: relative;
+    z-index: 2;
+
+}
+
+.navbar-holder {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    max-width: 50%;
+    margin-left: auto;
+    opacity: 1.0;
+
+}
+
+.navbar-holder>*:nth-child(n) {
+    flex: 1 2 20%;
+    flex-flow: row wrap;
+    flex-basis: 20%;
+    max-height: 20%;
+    text-align: center;
+    font-size: 2.5ch;
+    
+    margin: 0 auto;
+    font-size: 2rem;
+
+}
+
+
+
+//to do
+.navbar-item-name {
+    font-size: 4ch;
+    bottom: 0;
+}
+
+.navbar-item {
+    border: 3px solid white;
+    text-decoration: none;
+    text-align: center;
+    color: $text-100;
+    font-family: $global-font2;
+    letter-spacing: 2px;
+}
+
+//sections
+
+.header {
+    box-shadow:  8px 8px 60px 15px $shadow-100 inset;
+    width: 100%;
+    margin: 0 auto;
+   transform: translateY(-9vh);
+}
+.header-background{
+    background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg") round;
+    object-fit: fill;
+    width: 100%;
+    min-height: 86vh;
+    z-index: -2;
+    mix-blend-mode: difference;
+}
+.header-text{
+    font-size: 5rem;
+    color: $text-100;
+    font-weight: 600;
+    font-family: $global-font2;
+    text-align: center;
+    margin: 0 auto;
+    z-index: 2;
+    transform: translateY(10vh);
+    text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
+}
+.header-text> :nth-child(2){
+    font-size: 1rem;
+    max-width: 60%;
+    margin: auto;
+    text-shadow: 10px 10px 13px rgba(66, 68, 90, 1);
+
+}
+
+
+
+.section-prop {
+    background-color: $neutral-100;
+    width: 95%;
+    min-height: 100vh;
+    margin: auto;
+}
+
+.section-break {
+    background-color: $neutral-100;
+    border-radius: 40px;
+    text-align: center;
+    color: $text-200;
+    display: block;
+    min-height: 80vh;
+    width: 95%;
+    margin: auto;
+    transform: translateY(-20vh);
+    font-size: 10vh;
+    box-shadow:  8px 8px 60px 15px $shadow-100;
+    z-index: 2;
+    font-family: sans-serif;
+    overflow: hidden;
+  
+}
+.section-header{
+    font-size: 3rem;
+}
+.about-text {
+    width: 30%;
+    min-height: .5vh;
+    border-radius: 100px;
+    background-color: hsl(0, 0%, 90%);
+    background-image: $gradient-100;
+    margin: auto;
+    
+}
+
+.about-flex {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin-top: 7.5%;
+    margin: auto;
+    justify-content: center;
+
+}
+
+.about-flex *:nth-child(n) {
+
+    flex: 3 1 50%;
+    flex-flow: column wrap;
+    margin: auto;
+    margin-top: 20vh;
+    content: '';
+    font-size: 3vh;
+
+}
+
+.about-flex *:nth-child(1) {
+    height: 50vh;
+    margin-left: -10%;
+}
+
+.about-image {
+    border-radius: 100px;
+    width: 50vw;
+}
+
+.about-flex-services {
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    margin: 0 auto;
+    margin-top: 10%;
+    justify-content: center;
+    max-width: 70vw;
+    gap: .5rem;
+}
+
+.about-flex-services> *:nth-child(n) {
+
+    flex: 2 250px;
+    
+    margin: auto;
+    
+    padding-top: 3vh;
+    content: '';
+    font-size: 1.5vh;
+    border-radius: 30px;
+}
+
+.icons {
+    font-size: 3rem !important;
+}
+
+.card {
+    min-height: 40vh;
+    
+    min-width: 10vw;
+    border: white solid 3px;
+    transition: 0.5s;
+    box-shadow: inset 3px 3px 20px 3px $shadow-100;    
+}
+.card:hover{
+    border: green 3px solid;
+    transition: 0.5s;
+    transform: rotateZ(5deg);
+    
+}
+.card-header{
+    font-size: 1.5rem;
+}
+.card-description{
+    font-size: 1rem;
+    color: $text-300;
+}
