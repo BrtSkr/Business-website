@@ -41,6 +41,7 @@ body {
   background-color: #dedede;
   -webkit-transition: 1s;
   transition: 1s;
+  scroll-behavior: smooth;
 }
 
 html {
@@ -57,8 +58,11 @@ html {
 body,
 h1,
 h2,
-h3, h4, h5, h6 {
-  margin: 0;
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 auto;
 }
 
 ::-webkit-scrollbar {
@@ -73,30 +77,38 @@ h3, h4, h5, h6 {
 
 .container {
   margin: 0 auto;
+  overflow-x: hidden;
 }
 
 .navbar-main {
   width: 100%;
-  height: 12vh;
+  min-height: 12vh;
   background: rgba(105, 68, 139, 0.63);
   top: 0;
-  position: relative;
-  z-index: 2;
+  position: fixed;
+  z-index: 3;
 }
 
 .navbar-holder {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
   -webkit-box-orient: horizontal;
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -ms-flex-line-pack: start;
+      align-content: flex-start;
   max-width: 50%;
-  margin-left: auto;
-  opacity: 1.0;
+  margin-left: 40vw;
 }
 
 .navbar-holder > *:nth-child(n) {
@@ -107,12 +119,8 @@ h3, h4, h5, h6 {
   -webkit-box-direction: normal;
       -ms-flex-flow: row wrap;
           flex-flow: row wrap;
-  -ms-flex-preferred-size: 20%;
-      flex-basis: 20%;
   max-height: 20%;
   text-align: center;
-  font-size: 2.5ch;
-  margin: 0 auto;
   font-size: 2rem;
 }
 
@@ -122,7 +130,6 @@ h3, h4, h5, h6 {
 }
 
 .navbar-item {
-  border: 3px solid white;
   text-decoration: none;
   text-align: center;
   color: white;
@@ -130,13 +137,16 @@ h3, h4, h5, h6 {
   letter-spacing: 2px;
 }
 
+.navbar-item:hover {
+  background-color: #fff;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
 .header {
-  -webkit-box-shadow: 8px 8px 60px 15px #404040 inset;
-          box-shadow: 8px 8px 60px 15px #404040 inset;
   width: 100%;
   margin: 0 auto;
-  -webkit-transform: translateY(-9vh);
-          transform: translateY(-9vh);
+  margin-top: -7.1vh;
 }
 
 .header-background {
@@ -144,39 +154,58 @@ h3, h4, h5, h6 {
   -o-object-fit: fill;
      object-fit: fill;
   width: 100%;
-  min-height: 86vh;
+  min-height: 85vh;
   z-index: -2;
-  mix-blend-mode: difference;
+  animation: header-animation 2s reverse;
+  -webkit-animation-iteration-count: 1;
+          animation-iteration-count: 1;
 }
 
 .header-text {
-  font-size: 5rem;
+  font-size: 4rem;
   color: white;
   font-weight: 600;
   font-family: "Open Sans";
+  letter-spacing: 3px;
   text-align: center;
   margin: 0 auto;
   z-index: 2;
-  -webkit-transform: translateY(10vh);
-          transform: translateY(10vh);
+  -webkit-transform: translateY(15vh);
+          transform: translateY(15vh);
   text-shadow: 15px 15px 20px #42445a;
+  max-width: 90%;
 }
 
 .header-text > :nth-child(2) {
   font-size: 1rem;
-  max-width: 60%;
+  max-width: 80vw;
   margin: auto;
   text-shadow: 10px 10px 13px #42445a;
 }
 
-.section-prop {
-  background-color: #dedede;
-  width: 95%;
-  min-height: 100vh;
-  margin: auto;
+@-webkit-keyframes header-animation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
 }
 
-.section-break {
+@keyframes header-animation {
+  0% {
+    -webkit-transform: scale(1);
+            transform: scale(1);
+  }
+  100% {
+    -webkit-transform: scale(1.1);
+            transform: scale(1.1);
+  }
+}
+
+.section-prop {
   background-color: #dedede;
   border-radius: 40px;
   text-align: center;
@@ -185,14 +214,52 @@ h3, h4, h5, h6 {
   min-height: 80vh;
   width: 95%;
   margin: auto;
-  -webkit-transform: translateY(-20vh);
-          transform: translateY(-20vh);
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
   font-size: 10vh;
   -webkit-box-shadow: 8px 8px 60px 15px #404040;
           box-shadow: 8px 8px 60px 15px #404040;
   z-index: 2;
   font-family: sans-serif;
   overflow: hidden;
+}
+
+.section-break-image {
+  background-color: #dedede;
+  background: url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+  background-attachment: fixed;
+  min-height: 40vh;
+  margin: auto;
+  padding: 10vh 0 20vh 0;
+  color: white;
+  -webkit-box-shadow: 3px 3px 150px 90px black inset;
+          box-shadow: 3px 3px 150px 90px black inset;
+  border-radius: 10px;
+}
+
+.section-break-image h6 {
+  font-size: 3rem;
+  font-family: "Open Sans";
+  letter-spacing: 1.5px;
+  text-align: left;
+  margin: 0 0 0 10vw;
+}
+
+.section-break-image p {
+  font-size: 1.2rem;
+  text-align: left;
+  letter-spacing: .9px;
+  max-width: 50vw;
+  margin-left: 10vw;
+  padding: 0;
+}
+
+.section-break {
+  background-color: #dedede;
+  width: 100%;
+  min-height: 40vh;
+  max-height: 50vh;
+  margin: auto;
 }
 
 .section-header {
@@ -292,14 +359,17 @@ h3, h4, h5, h6 {
   transition: 0.5s;
   -webkit-box-shadow: inset 3px 3px 20px 3px #404040;
           box-shadow: inset 3px 3px 20px 3px #404040;
+  text-shadow: 15px 15px 20px #42445a;
+  letter-spacing: 1.5px;
 }
 
 .card:hover {
   border: green 3px solid;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform: rotateZ(5deg);
-          transform: rotateZ(5deg);
+  -webkit-transition: 0.5s !important;
+  transition: 0.5s !important;
+  -webkit-transform: scale(1.2) !important;
+          transform: scale(1.2) !important;
+  z-index: 2;
 }
 
 .card-header {
@@ -309,5 +379,43 @@ h3, h4, h5, h6 {
 .card-description {
   font-size: 1rem;
   color: #404040;
+}
+
+.about-flex-wrap {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-flex: 1;
+      -ms-flex: 1 1 50%;
+          flex: 1 1 50%;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+}
+
+.card-about-outer {
+  background-color: #202122;
+  min-width: 15vw;
+  max-width: 15vw;
+  min-height: 30vh;
+  max-height: 30vh;
+  overflow: hidden;
+  padding: 30px 0 0 0;
+  -webkit-transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
+          transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
+  border: white solid 3px;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: inset 3px 3px 20px 3px #404040;
+          box-shadow: inset 3px 3px 20px 3px #404040;
+  z-index: 0;
+}
+
+.card-about-inner {
+  background: url("https://www.komputronik.pl/informacje/wp-content/uploads/2018/05/dron-do-700.jpg") round;
+  border-radius: 30px;
+  margin: auto;
+  width: 80%;
+  height: 10vh;
 }
 /*# sourceMappingURL=style.css.map */
