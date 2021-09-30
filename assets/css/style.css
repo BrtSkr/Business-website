@@ -143,7 +143,7 @@ h6 {
   transition: 0.5s;
 }
 
-.header {
+#header {
   width: 100%;
   margin: 0 auto;
   margin-top: -7.1vh;
@@ -205,7 +205,7 @@ h6 {
   }
 }
 
-.section-prop {
+#services {
   background-color: #dedede;
   border-radius: 40px;
   text-align: center;
@@ -224,7 +224,62 @@ h6 {
   overflow: hidden;
 }
 
-.section-break-image {
+#team {
+  background-color: #dedede;
+  border-radius: 40px;
+  text-align: center;
+  color: black;
+  display: block;
+  min-height: 80vh;
+  width: 100%;
+  margin: auto;
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
+  font-size: 10vh;
+  -webkit-box-shadow: 8px 8px 60px 15px #404040;
+          box-shadow: 8px 8px 60px 15px #404040;
+  z-index: 2;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.team-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: .5rem;
+  margin: auto;
+  width: 90%;
+  padding-bottom: 30px;
+}
+
+.team-flex > *:nth-child(n) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1;
+          flex: 2 1;
+  border: 3px solid black;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  max-height: 100vh;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+}
+
+#about {
   background-color: #dedede;
   background: url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
   background-attachment: fixed;
@@ -317,7 +372,7 @@ h6 {
   width: 50vw;
 }
 
-.about-flex-services {
+.services-flex {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -328,18 +383,24 @@ h6 {
       -ms-flex-direction: row;
           flex-direction: row;
   margin: 0 auto;
-  margin-top: 10%;
+  margin-top: 7%;
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
   max-width: 70vw;
   gap: .5rem;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
 }
 
-.about-flex-services > *:nth-child(n) {
+.services-flex > *:nth-child(n) {
   -webkit-box-flex: 2;
-      -ms-flex: 2 250px;
-          flex: 2 250px;
+      -ms-flex: 2 1 250px;
+          flex: 2 1 250px;
   margin: auto;
   padding-top: 3vh;
   content: '';
@@ -348,7 +409,7 @@ h6 {
 }
 
 .icons {
-  font-size: 3rem !important;
+  font-size: 3rem;
 }
 
 .card {
@@ -365,10 +426,10 @@ h6 {
 
 .card:hover {
   border: green 3px solid;
-  -webkit-transition: 0.5s !important;
-  transition: 0.5s !important;
-  -webkit-transform: scale(1.2) !important;
-          transform: scale(1.2) !important;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-transform: scale(1.05);
+          transform: scale(1.05);
   z-index: 2;
 }
 
@@ -417,5 +478,45 @@ h6 {
   margin: auto;
   width: 80%;
   height: 10vh;
+}
+
+.flip-card {
+  width: 150px;
+  height: 150px;
+}
+
+.flip-card-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip-card-front, .flip-card-back {
+  position: absolute;
+}
+
+.flip-card-front {
+  background: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-back {
+  background: yellow;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-holder {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
 }
 /*# sourceMappingURL=style.css.map */

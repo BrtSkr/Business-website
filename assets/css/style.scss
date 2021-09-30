@@ -153,7 +153,7 @@ h6 {
 
 //sections
 
-.header {
+#header {
     width: 100%;
     margin: 0 auto;
     margin-top: -7.1vh;
@@ -162,6 +162,7 @@ h6 {
 .header-background {
     background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg") round;
     object-fit: fill;
+    
     width: 100%;
     min-height: 85vh;
     z-index: -2;
@@ -201,7 +202,7 @@ h6 {
     }
 }
 
-.section-prop {
+#services {
     background-color: $neutral-100;
     border-radius: 40px;
     text-align: center;
@@ -216,10 +217,46 @@ h6 {
     z-index: 2;
     font-family: sans-serif;
     overflow: hidden;
-
 }
 
-.section-break-image {
+#team{
+    background-color: $neutral-100;
+    border-radius: 40px;
+    text-align: center;
+    color: $text-200;
+    display: block;
+    min-height: 80vh;
+    width: 100%;
+    margin: auto;
+    transform: translateY(-5vh);
+    font-size: 10vh;
+    box-shadow: 8px 8px 60px 15px $shadow-100;
+    z-index: 2;
+    font-family: sans-serif;
+    overflow: hidden;
+}
+img{
+    max-width: 100%;
+}
+.team-flex{
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: row;
+    gap: .5rem;
+    margin: auto;
+    width: 90%;
+    padding-bottom: 30px;
+}
+.team-flex>*:nth-child(n){
+    flex: 2 1;
+    border: 3px solid black;
+    flex-flow: row;
+    max-height: 100vh;
+    
+    align-self: center;
+    margin: auto;
+}
+#about {
     background-color: $neutral-100;
     background: url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
     background-attachment: fixed;
@@ -238,7 +275,6 @@ h6 {
     letter-spacing: 1.5px;
     text-align: left;
     margin: 0 0 0 10vw;
-
 }
 
 .section-break-image p {
@@ -308,19 +344,21 @@ h6 {
     width: 50vw;
 }
 
-.about-flex-services {
+.services-flex {
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 10%;
+    margin-top: 7%;
     justify-content: center;
     max-width: 70vw;
     gap: .5rem;
+    transition: 0.5s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
 }
-
-.about-flex-services>*:nth-child(n) {
-    flex: 2 250px;
+.services-flex>*:nth-child(n) {
+    flex: 2 1 250px;
     margin: auto;
     padding-top: 3vh;
     content: '';
@@ -329,7 +367,7 @@ h6 {
 }
 
 .icons {
-    font-size: 3rem !important;
+    font-size: 3rem;
 }
 
 
@@ -346,11 +384,13 @@ h6 {
 }
 
 .card:hover {
+
     border: green 3px solid;
-    transition: 0.5s !important;
-    transform: scale(1.2)!important;
+    transition: 0.5s;
+    transform: scale(1.05);
     z-index: 2;
 }
+
 
 .card-header {
     font-size: 1.5rem;
@@ -359,6 +399,7 @@ h6 {
 .card-description {
     font-size: 1rem;
     color: $text-300;
+    
 }
 
 .about-flex-wrap {
@@ -389,4 +430,35 @@ h6 {
     margin: auto;
     width: 80%;
     height: 10vh;
+}
+
+.flip-card{
+    width: 150px;
+    height: 150px;
+}
+.flip-card-holder{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    transition: 0.5s;
+    perspective: 1000px;
+    transform-style: preserve-3d;
+}
+.flip-card-front, .flip-card-back{
+    position: absolute;
+    
+}
+.flip-card-front{
+    background: blue;
+    width: 100%;
+    height: 100%;
+}
+.flip-card-back{
+    background: yellow;
+    width: 100%;
+    height: 100%;
+    transform: rotateY(180deg);
+}
+.flip-card:hover .flip-card-holder{
+    transform: rotateY(180deg);
 }

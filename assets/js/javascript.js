@@ -6,4 +6,4 @@ x.onclick = function(){
     let y = z.getBoundingClientRect().top + window.pageYOffset + yOffset;
     window.scrollTo({top: y})
 } 
-})
+}) 
