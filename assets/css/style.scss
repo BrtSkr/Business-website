@@ -21,7 +21,14 @@ $shadow-200: hsl(0, 0%, 100%);
 //gradients
 $gradient-100: linear-gradient(90deg, rgba(230, 230, 230, 1) 0%, rgba(51, 51, 51, 1) 50%, rgba(230, 230, 230, 1) 100%);
 $gradient-200:linear-gradient(to right, var(--clr-neutral-800), var(--clr-accent-600), var(--clr-neutral-900), var(--clr-neutral-800));
-
+%header{
+    font-size: 3.5rem;
+    font-family: $global-font2;
+    
+}
+%paragraph{
+  
+}
 #hero::after {
     content: '';
     position: absolute;
@@ -156,30 +163,36 @@ h6 {
 #header {
     width: 100%;
     margin: 0 auto;
-    margin-top: -7.1vh;
+    
 }
 
 .header-background {
-    background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg") round;
-    object-fit: fill;
-    
+    background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg");
+    background-size: cover;
     width: 100%;
-    min-height: 85vh;
+    min-height: 95vh;
+    overflow-y: auto; //after removing this 
     z-index: -2;
     animation: header-animation 2s reverse;
     animation-iteration-count: 1;
 }
-
+.header-background button{
+    background: rgb(96, 79, 255);
+    border-radius: 30px;
+    border: $neutral-100;
+    min-width: 10vw;
+    min-height: 5vh;
+}
 .header-text {
-    font-size: 4rem;
+    font-size: 3.7rem;
     color: $text-100;
     font-weight: 600;
     font-family: $global-font2;
-    letter-spacing: 3px;
+    letter-spacing: 2.5px;
     text-align: center;
     margin: 0 auto;
     z-index: 2;
-    transform: translateY(15vh);
+    transform: translateY(12.5vh);
     text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
     max-width: 90%;
 }
@@ -203,7 +216,7 @@ h6 {
 }
 
 #services {
-    background-color: $neutral-100;
+    background: $neutral-100;
     border-radius: 40px;
     text-align: center;
     color: $text-200;
@@ -217,6 +230,7 @@ h6 {
     z-index: 2;
     font-family: sans-serif;
     overflow: hidden;
+    
 }
 
 #team{
@@ -228,6 +242,7 @@ h6 {
     min-height: 80vh;
     width: 100%;
     margin: auto;
+    padding-top: 20px;
     transform: translateY(-5vh);
     font-size: 5vh;
     box-shadow: 8px 8px 60px 15px $shadow-100;
@@ -245,8 +260,12 @@ img{
     flex-direction: row;
     gap: .5rem;
     margin: auto;
-    width: 90%;
+    margin-top: 5%;
     padding-bottom: 30px;
+    width: 90%;
+    justify-self: center;
+    align-self: center;
+    
 }
 //flex properties for all of the children inside container with ".team-flex" class
 .team-flex>*:nth-child(n){
@@ -258,8 +277,13 @@ img{
     margin: auto;
     font-size: 1.2rem; //after changing this property it will change only text that doesn't have class inside
     text-align: left;
-   line-height: 1.4vh;
+    line-height: 1.4vh;
 }
+.team-flex img{
+    max-height: 50vh;
+    border-radius: 15px;
+}
+//currently it finds no purpose here
 .media-bar{
     background-color: blue;
     transform: translateY(-125px);
@@ -290,6 +314,7 @@ img{
     color: white;
     box-shadow: 3px 3px 150px 90px black inset;
     border-radius: 10px;
+    transform:translatez(0);
 }
 
 .section-break-image h6 {
@@ -484,4 +509,54 @@ img{
 }
 .flip-card:hover .flip-card-holder{
     transform: rotateY(180deg);
+}
+#contact{
+    background: $neutral-700 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+    background-position: bottom;
+    
+    margin-top: -10vh;
+    min-height: 50vh;
+    padding-top: 12.5vh;
+}
+
+#contact>span{
+    @extend %header;
+    color: $text-100;
+    letter-spacing: 1.5px;
+    margin-left: 10vw;
+}
+.footer-flex{
+  display: flex;
+  color: $text-300;
+  gap: 2vh;
+  max-height: 50vh;
+  margin-left: calc(0% + 22.5vh);
+  flex-direction: column;  
+  flex-wrap: wrap;
+  bottom: 0;
+  
+}
+
+.footer-flex *:nth-child(n){
+  flex: 1 1;
+  color: $neutral-100;
+  
+}
+.footer-text{
+ margin-top: 1rem;
+ font-size: 1.5rem;
+}
+.footer-subtext{
+    font-size: 1.5rem;
+    letter-spacing: 1.5px;
+}
+.footer-text i{
+    font-size: 2.8rem;
+    padding-right: 1rem;
+    
+}
+#contact img{
+    max-height: 20vh;
+    margin-top: 10vh;
+    opacity: 0.3;
 }
