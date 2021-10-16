@@ -1,43 +1,11 @@
+@font-face {
+  font-family: 'Open Sans';
+  src: url(/assets/fonts/OpenSans-Regular.ttf);
+}
+
 #contact > span {
-  font-size: 3.5rem;
+  font-size: 2.5rem;
   font-family: "Open Sans";
-}
-
-#hero::after {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 130%;
-  height: 95%;
-  z-index: 0;
-  border-radius: 0 0 50% 50%;
-  -webkit-transform: translateX(-50%) rotate(0deg);
-          transform: translateX(-50%) rotate(0deg);
-}
-
-#hero::before {
-  content: '';
-  position: absolute;
-  left: 50%;
-  top: 0;
-  width: 100%;
-  height: 96%;
-  background: url("https://businessjournal.pl/wp-content/uploads/2019/08/architecture-buildings-city-373893.jpg") no-repeat;
-  -o-object-fit: fill;
-     object-fit: fill;
-  opacity: 0.5;
-  z-index: 0;
-  border-radius: 0 0 50% 50%;
-  -webkit-transform: translateX(-50%) translateY(18px) rotate(2deg);
-          transform: translateX(-50%) translateY(18px) rotate(2deg);
-}
-
-#hero {
-  width: 100%;
-  height: 90vh;
-  overflow: hidden;
-  position: relative;
 }
 
 body {
@@ -47,12 +15,16 @@ body {
   -webkit-transition: 1s;
   transition: 1s;
   scroll-behavior: smooth;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 html {
   scroll-behavior: smooth;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 1s;
+  transition: 1s;
+  -webkit-transform: translateZ(0);
+          transform: translateZ(0);
 }
 
 * {
@@ -171,6 +143,20 @@ h6 {
   border: #dedede;
   min-width: 10vw;
   min-height: 5vh;
+  font-family: "Open Sans";
+  font-size: 1rem;
+  -webkit-transform: translateY(5vh) translateZ(0);
+          transform: translateY(5vh) translateZ(0);
+  cursor: pointer;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+}
+
+.header-background button:hover {
+  -webkit-transform: scale(1.1) translateY(5vh) translateZ(0);
+          transform: scale(1.1) translateY(5vh) translateZ(0);
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
 }
 
 .header-text {
@@ -303,6 +289,7 @@ img {
 .team-flex img {
   max-height: 50vh;
   border-radius: 15px;
+  min-width: 12.5vw;
 }
 
 .media-bar {
@@ -327,7 +314,7 @@ img {
 
 #about {
   background-color: #dedede;
-  background: url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+  background: #dedede url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
   background-attachment: fixed;
   min-height: 40vh;
   margin: auto;
@@ -355,14 +342,6 @@ img {
   max-width: 50vw;
   margin-left: 10vw;
   padding: 0;
-}
-
-.section-break {
-  background-color: #dedede;
-  width: 100%;
-  min-height: 40vh;
-  max-height: 50vh;
-  margin: auto;
 }
 
 .section-header {
@@ -574,12 +553,14 @@ img {
   margin-top: -10vh;
   min-height: 50vh;
   padding-top: 12.5vh;
+  -webkit-box-shadow: 3px 3px 130px 150px black inset;
+          box-shadow: 3px 3px 130px 150px black inset;
 }
 
 #contact > span {
   color: white;
   letter-spacing: 1.5px;
-  margin-left: 10vw;
+  margin-left: 5.5vw;
 }
 
 .footer-flex {
@@ -589,7 +570,7 @@ img {
   color: #404040;
   gap: 2vh;
   max-height: 50vh;
-  margin-left: calc(0% + 22.5vh);
+  margin-left: 7vw;
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
       -ms-flex-direction: column;
@@ -599,7 +580,7 @@ img {
   bottom: 0;
 }
 
-.footer-flex *:nth-child(n) {
+.footer-flex > *:nth-child(n) {
   -webkit-box-flex: 1;
       -ms-flex: 1 1;
           flex: 1 1;
@@ -608,22 +589,121 @@ img {
 
 .footer-text {
   margin-top: 1rem;
-  font-size: 1.5rem;
-}
-
-.footer-subtext {
-  font-size: 1.5rem;
-  letter-spacing: 1.5px;
+  font-size: 1.2rem;
+  text-shadow: 25px 9px 16px #404040;
 }
 
 .footer-text i {
-  font-size: 2.8rem;
-  padding-right: 1rem;
+  font-size: 2.3rem;
+  padding-right: .5rem;
+}
+
+.footer-text div {
+  color: gray;
+  letter-spacing: .7px;
+  font-size: 1rem;
 }
 
 #contact img {
   max-height: 20vh;
   margin-top: 10vh;
   opacity: 0.3;
+}
+
+.hvr-shutter-in-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #2098D1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-shutter-in-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #e1e1e1;
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+  color: white;
+}
+
+.hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+}
+
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
+  display: inline-block;
+  vertical-align: middle;
+  -webkit-transform: perspective(1px) translateZ(0);
+  transform: perspective(1px) translateZ(0);
+  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  position: relative;
+  background: #e1e1e1;
+  -webkit-transition-property: color;
+  transition-property: color;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+}
+
+.hvr-shutter-out-horizontal:before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: #2098D1;
+  -webkit-transform: scaleX(0);
+  transform: scaleX(0);
+  -webkit-transform-origin: 50%;
+  transform-origin: 50%;
+  -webkit-transition-property: transform;
+  -webkit-transition-property: -webkit-transform;
+  transition-property: -webkit-transform;
+  transition-property: transform;
+  transition-property: transform, -webkit-transform;
+  -webkit-transition-duration: 0.3s;
+  transition-duration: 0.3s;
+  -webkit-transition-timing-function: ease-out;
+  transition-timing-function: ease-out;
+}
+
+.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+  color: white;
+}
+
+.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+  -webkit-transform: scaleX(1);
+  transform: scaleX(1);
 }
 /*# sourceMappingURL=style.css.map */

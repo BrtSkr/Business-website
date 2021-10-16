@@ -1,3 +1,7 @@
+@font-face {
+    font-family: 'Open Sans';
+    src: url(/assets/fonts/OpenSans-Regular.ttf);
+}
 //fonts
 $global-font: sans-serif;
 $global-font2: 'Open Sans';
@@ -22,48 +26,11 @@ $shadow-200: hsl(0, 0%, 100%);
 $gradient-100: linear-gradient(90deg, rgba(230, 230, 230, 1) 0%, rgba(51, 51, 51, 1) 50%, rgba(230, 230, 230, 1) 100%);
 $gradient-200:linear-gradient(to right, var(--clr-neutral-800), var(--clr-accent-600), var(--clr-neutral-900), var(--clr-neutral-800));
 %header{
-    font-size: 3.5rem;
+    font-size: 2.5rem;
     font-family: $global-font2;
     
 }
-%paragraph{
-  
-}
-#hero::after {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 130%;
-    height: 95%;
 
-    z-index: 0;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) rotate(0deg);
-}
-
-#hero::before {
-    content: '';
-    position: absolute;
-    left: 50%;
-    top: 0;
-    width: 100%;
-    height: 96%;
-    background: url("https://businessjournal.pl/wp-content/uploads/2019/08/architecture-buildings-city-373893.jpg") no-repeat;
-    object-fit: fill;
-    opacity: 0.5;
-    z-index: 0;
-    border-radius: 0 0 50% 50%;
-    transform: translateX(-50%) translateY(18px) rotate(2deg);
-}
-
-#hero {
-    width: 100%;
-    height: 90vh;
-    overflow: hidden;
-    position: relative;
-
-}
 
 body {
     max-width: 100%;
@@ -71,11 +38,13 @@ body {
     background-color: $neutral-100;
     transition: 1s;
     scroll-behavior: smooth;
+    transform: translateZ(0);
 }
 
 html {
     scroll-behavior: smooth;
-    transition: 0.5s;
+    transition: 1s;
+    transform: translateZ(0);
 }
 
 * {
@@ -101,7 +70,7 @@ h6 {
     background-color: $scrollbar;
     border-radius: 20px;
 }
-
+//Element that holds everything inside
 .container {
     margin: 0 auto;
     overflow-x: hidden;
@@ -182,6 +151,16 @@ h6 {
     border: $neutral-100;
     min-width: 10vw;
     min-height: 5vh;
+    font-family: $global-font2;
+    font-size: 1rem;
+    transform: translateY(5vh) translateZ(0);
+    cursor: pointer;
+    transition: 0.5s;
+}
+.header-background button:hover{
+  transform: scale(1.1) translateY(5vh) translateZ(0);
+  transition: 0.5s;
+  
 }
 .header-text {
     font-size: 3.7rem;
@@ -282,6 +261,7 @@ img{
 .team-flex img{
     max-height: 50vh;
     border-radius: 15px;
+    min-width:  12.5vw;
 }
 //currently it finds no purpose here
 .media-bar{
@@ -303,10 +283,10 @@ img{
     font-size: .8rem;
     color: $text-300;
 }
-//
+//Section with information about company
 #about {
     background-color: $neutral-100;
-    background: url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+    background: $neutral-100 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
     background-attachment: fixed;
     min-height: 40vh;
     margin: auto;
@@ -314,9 +294,9 @@ img{
     color: white;
     box-shadow: 3px 3px 150px 90px black inset;
     border-radius: 10px;
-    transform:translatez(0);
+    transform: translatez(0);
 }
-
+//Style for the name of the section
 .section-break-image h6 {
     font-size: 3rem;
     font-family: $global-font2;
@@ -324,7 +304,7 @@ img{
     text-align: left;
     margin: 0 0 0 10vw;
 }
-
+//Style for description about company
 .section-break-image p {
     font-size: 1.2rem;
     text-align: left;
@@ -336,14 +316,6 @@ img{
 
 }
 
-
-.section-break {
-    background-color: $neutral-100;
-    width: 100%;
-    min-height: 40vh;
-    max-height: 50vh;
-    margin: auto;
-}
 
 
 
@@ -510,53 +482,152 @@ img{
 .flip-card:hover .flip-card-holder{
     transform: rotateY(180deg);
 }
+//Section with contact details
 #contact{
     background: $neutral-700 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
     background-position: bottom;
-    
-    margin-top: -10vh;
+    margin-top: -10vh; 
     min-height: 50vh;
     padding-top: 12.5vh;
+    box-shadow: 3px 3px 130px 150px black inset;
 }
-
+//Text displayed above two elements inside footer
 #contact>span{
-    @extend %header;
+    @extend %header; //Adds font size and font family
     color: $text-100;
     letter-spacing: 1.5px;
-    margin-left: 10vw;
+    margin-left: 5.5vw;
+    
 }
+//Flex for two elements inside footer (Elements: Location of business and phone number)
 .footer-flex{
   display: flex;
   color: $text-300;
   gap: 2vh;
   max-height: 50vh;
-  margin-left: calc(0% + 22.5vh);
+  margin-left: 7vw;
   flex-direction: column;  
   flex-wrap: wrap;
   bottom: 0;
   
 }
-
-.footer-flex *:nth-child(n){
+//Styling for all the childs inside footer flex
+.footer-flex>*:nth-child(n){
   flex: 1 1;
   color: $neutral-100;
-  
 }
+//Text inside footer that displays information about street or location 
 .footer-text{
  margin-top: 1rem;
- font-size: 1.5rem;
+ font-size: 1.2rem;
+ text-shadow: 25px 9px 16px $shadow-100;
 }
-.footer-subtext{
-    font-size: 1.5rem;
-    letter-spacing: 1.5px;
-}
+//Styling icon inside footer text
 .footer-text i{
-    font-size: 2.8rem;
-    padding-right: 1rem;
+    font-size: 2.3rem;
+    padding-right: .5rem;
     
+}
+//Styling for text under .footer-text (for example: street name, phone number)
+.footer-text div{
+    color: gray;
+    letter-spacing: .7px;
+    font-size: 1rem;
+    
+
 }
 #contact img{
     max-height: 20vh;
     margin-top: 10vh;
     opacity: 0.3;
 }
+
+
+
+
+
+
+
+
+.hvr-shutter-in-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #2098D1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-in-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #e1e1e1;
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+    color: white;
+  }
+  .hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+  }
+  
+  /* Shutter Out Horizontal */
+  .hvr-shutter-out-horizontal {
+    display: inline-block;
+    vertical-align: middle;
+    -webkit-transform: perspective(1px) translateZ(0);
+    transform: perspective(1px) translateZ(0);
+    box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+    position: relative;
+    background: #e1e1e1;
+    -webkit-transition-property: color;
+    transition-property: color;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+  }
+  .hvr-shutter-out-horizontal:before {
+    content: "";
+    position: absolute;
+    z-index: -1;
+    top: 0;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background: #2098D1;
+    -webkit-transform: scaleX(0);
+    transform: scaleX(0);
+    -webkit-transform-origin: 50%;
+    transform-origin: 50%;
+    -webkit-transition-property: transform;
+    transition-property: transform;
+    -webkit-transition-duration: 0.3s;
+    transition-duration: 0.3s;
+    -webkit-transition-timing-function: ease-out;
+    transition-timing-function: ease-out;
+  }
+  .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+    color: white;
+  }
+  .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+    -webkit-transform: scaleX(1);
+    transform: scaleX(1);
+  }
