@@ -1,0 +1,59 @@
+//Section with contact details
+#contact{
+    background: $neutral-700 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+    background-position: bottom;
+    margin-top: -10vh; 
+    min-height: 50vh;
+    padding-top: 12.5vh;
+    box-shadow: 3px 3px 130px 150px black inset;
+}
+//Text displayed above two elements inside footer
+#contact>span{
+    @extend %header; //Adds font size and font family
+    color: $text-100;
+    letter-spacing: 1.5px;
+    margin-left: 5.5vw;
+    
+}
+//Flex for two elements inside footer (Elements: Location of business and phone number)
+.footer-flex{
+  display: flex;
+  color: $text-300;
+  gap: 2vh;
+  max-height: 50vh;
+  margin-left: 7vw;
+  flex-direction: column;  
+  flex-wrap: wrap;
+  bottom: 0;
+  
+}
+//Styling for all the childs inside footer flex
+.footer-flex>*:nth-child(n){
+  flex: 1 1;
+  color: $neutral-100;
+}
+//Text inside footer that displays information about street or location 
+.footer-text{
+ margin-top: 1rem;
+ font-size: 1.2rem;
+ text-shadow: 25px 9px 16px $shadow-100;
+}
+//Styling icon inside footer text
+.footer-text i{
+    font-size: 2.3rem;
+    padding-right: .5rem;
+    
+}
+//Styling for text under .footer-text (for example: street name, phone number)
+.footer-text div{
+    color: gray;
+    letter-spacing: .7px;
+    font-size: 1rem;
+    
+
+}
+#contact img{
+    max-height: 20vh;
+    margin-top: 10vh;
+    opacity: 0.3;
+}

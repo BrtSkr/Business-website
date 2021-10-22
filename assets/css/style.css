@@ -3,60 +3,6 @@
   src: url(/assets/fonts/OpenSans-Regular.ttf);
 }
 
-#contact > span {
-  font-size: 2.5rem;
-  font-family: "Open Sans";
-}
-
-body {
-  max-width: 100%;
-  color: black;
-  background-color: #dedede;
-  -webkit-transition: 1s;
-  transition: 1s;
-  scroll-behavior: smooth;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-}
-
-html {
-  scroll-behavior: smooth;
-  -webkit-transition: 1s;
-  transition: 1s;
-  -webkit-transform: translateZ(0);
-          transform: translateZ(0);
-}
-
-* {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
-
-body,
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  margin: 0 auto;
-}
-
-::-webkit-scrollbar {
-  width: 10px;
-  background: rgba(0, 0, 0, 0.5);
-}
-
-::-webkit-scrollbar-thumb {
-  background-color: #5f5f5f;
-  border-radius: 20px;
-}
-
-.container {
-  margin: 0 auto;
-  overflow-x: hidden;
-}
-
 .navbar-main {
   width: 100%;
   min-height: 12vh;
@@ -222,183 +168,6 @@ h6 {
   overflow: hidden;
 }
 
-#team {
-  background-color: #dedede;
-  border-radius: 40px;
-  text-align: center;
-  color: black;
-  display: block;
-  min-height: 80vh;
-  width: 100%;
-  margin: auto;
-  padding-top: 20px;
-  -webkit-transform: translateY(-5vh);
-          transform: translateY(-5vh);
-  font-size: 5vh;
-  -webkit-box-shadow: 8px 8px 60px 15px #404040;
-          box-shadow: 8px 8px 60px 15px #404040;
-  z-index: 2;
-  font-family: sans-serif;
-  overflow: hidden;
-}
-
-img {
-  max-width: 100%;
-}
-
-.team-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  gap: .5rem;
-  margin: auto;
-  margin-top: 5%;
-  padding-bottom: 30px;
-  width: 90%;
-  justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-}
-
-.team-flex > *:nth-child(n) {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 200px;
-          flex: 2 1 200px;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: row;
-          flex-flow: row;
-  max-height: 100vh;
-  -ms-grid-column-align: center;
-      justify-self: center;
-  -ms-flex-item-align: center;
-      -ms-grid-row-align: center;
-      align-self: center;
-  margin: auto;
-  font-size: 1.2rem;
-  text-align: left;
-  line-height: 1.4vh;
-}
-
-.team-flex img {
-  max-height: 50vh;
-  border-radius: 15px;
-  min-width: 12.5vw;
-}
-
-.media-bar {
-  background-color: blue;
-  -webkit-transform: translateY(-125px);
-          transform: translateY(-125px);
-  height: 30px;
-}
-
-.role {
-  color: #13baf1;
-  letter-spacing: .8px;
-  font-family: "Open Sans";
-  font-size: 0.8rem;
-}
-
-.info-member {
-  letter-spacing: 1px;
-  font-size: .8rem;
-  color: #404040;
-}
-
-#about {
-  background-color: #dedede;
-  background: #dedede url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
-  background-attachment: fixed;
-  min-height: 40vh;
-  margin: auto;
-  padding: 10vh 0 20vh 0;
-  color: white;
-  -webkit-box-shadow: 3px 3px 150px 90px black inset;
-          box-shadow: 3px 3px 150px 90px black inset;
-  border-radius: 10px;
-  -webkit-transform: translatez(0);
-          transform: translatez(0);
-}
-
-.section-break-image h6 {
-  font-size: 3rem;
-  font-family: "Open Sans";
-  letter-spacing: 1.5px;
-  text-align: left;
-  margin: 0 0 0 10vw;
-}
-
-.section-break-image p {
-  font-size: 1.2rem;
-  text-align: left;
-  letter-spacing: .9px;
-  max-width: 50vw;
-  margin-left: 10vw;
-  padding: 0;
-}
-
-.section-header {
-  font-size: 3rem;
-}
-
-.about-text {
-  width: 30%;
-  min-height: .5vh;
-  border-radius: 100px;
-  background-color: #e6e6e6;
-  background-image: -webkit-gradient(linear, left top, right top, from(#e6e6e6), color-stop(50%, #333333), to(#e6e6e6));
-  background-image: linear-gradient(90deg, #e6e6e6 0%, #333333 50%, #e6e6e6 100%);
-  margin: auto;
-}
-
-.about-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 7.5%;
-  margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
-
-.about-flex *:nth-child(n) {
-  -webkit-box-flex: 3;
-      -ms-flex: 3 1 50%;
-          flex: 3 1 50%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  margin: auto;
-  margin-top: 20vh;
-  content: '';
-  font-size: 3vh;
-}
-
-.about-flex *:nth-child(1) {
-  height: 50vh;
-  margin-left: -10%;
-}
-
-.about-image {
-  border-radius: 100px;
-  width: 50vw;
-}
-
 .services-flex {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -469,6 +238,153 @@ img {
   color: #404040;
 }
 
+#team {
+  background-color: #dedede;
+  border-radius: 40px;
+  text-align: center;
+  color: black;
+  display: block;
+  min-height: 80vh;
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+  -webkit-transform: translateY(-5vh);
+          transform: translateY(-5vh);
+  font-size: 5vh;
+  -webkit-box-shadow: 8px 8px 60px 15px #404040;
+          box-shadow: 8px 8px 60px 15px #404040;
+  z-index: 2;
+  font-family: sans-serif;
+  overflow: hidden;
+}
+
+.team-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  gap: .5rem;
+  margin: auto;
+  margin-top: 5%;
+  padding-bottom: 30px;
+  width: 90%;
+  justify-self: center;
+  -ms-flex-item-align: center;
+      align-self: center;
+}
+
+.team-flex > *:nth-child(n) {
+  -webkit-box-flex: 2;
+      -ms-flex: 2 1 200px;
+          flex: 2 1 200px;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: row;
+          flex-flow: row;
+  max-height: 100vh;
+  -ms-grid-column-align: center;
+      justify-self: center;
+  -ms-flex-item-align: center;
+      -ms-grid-row-align: center;
+      align-self: center;
+  margin: auto;
+  font-size: 1.2rem;
+  text-align: left;
+  line-height: 1.4vh;
+}
+
+.team-flex img {
+  max-height: 50vh;
+  border-radius: 15px;
+  min-width: 12.5vw;
+}
+
+.role {
+  color: #13baf1;
+  letter-spacing: .8px;
+  font-family: "Open Sans";
+  font-size: 0.8rem;
+}
+
+.info-member {
+  letter-spacing: 1px;
+  font-size: .8rem;
+  color: #404040;
+}
+
+#about {
+  background-color: #dedede;
+  background: #dedede url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+  background-attachment: fixed;
+  min-height: 40vh;
+  margin: auto;
+  padding: 10vh 0 20vh 0;
+  color: white;
+  -webkit-box-shadow: 3px 3px 150px 90px black inset;
+          box-shadow: 3px 3px 150px 90px black inset;
+  border-radius: 10px;
+  -webkit-transform: translatez(0);
+          transform: translatez(0);
+}
+
+.section-break-image h6 {
+  font-size: 3rem;
+  font-family: "Open Sans";
+  letter-spacing: 1.5px;
+  text-align: left;
+  margin: 0 0 0 10vw;
+}
+
+.section-break-image p {
+  font-size: 1.2rem;
+  text-align: left;
+  letter-spacing: .9px;
+  max-width: 50vw;
+  margin-left: 10vw;
+  padding: 0;
+}
+
+.about-flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: wrap;
+      flex-wrap: wrap;
+  -webkit-box-orient: horizontal;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: row;
+          flex-direction: row;
+  margin-top: 7.5%;
+  margin: auto;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+}
+
+.about-flex *:nth-child(n) {
+  -webkit-box-flex: 3;
+      -ms-flex: 3 1 50%;
+          flex: 3 1 50%;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-flow: column wrap;
+          flex-flow: column wrap;
+  margin: auto;
+  margin-top: 20vh;
+  content: '';
+  font-size: 3vh;
+}
+
+.about-flex *:nth-child(1) {
+  height: 50vh;
+  margin-left: -10%;
+}
+
 .about-flex-wrap {
   display: -webkit-box;
   display: -ms-flexbox;
@@ -478,73 +394,6 @@ img {
           flex: 1 1 50%;
   -ms-flex-wrap: wrap;
       flex-wrap: wrap;
-}
-
-.card-about-outer {
-  background-color: #202122;
-  min-width: 15vw;
-  max-width: 15vw;
-  min-height: 30vh;
-  max-height: 30vh;
-  overflow: hidden;
-  padding: 30px 0 0 0;
-  -webkit-transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
-          transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
-  border: white solid 3px;
-  border-radius: 30px;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-box-shadow: inset 3px 3px 20px 3px #404040;
-          box-shadow: inset 3px 3px 20px 3px #404040;
-  z-index: 0;
-}
-
-.card-about-inner {
-  background: url("https://www.komputronik.pl/informacje/wp-content/uploads/2018/05/dron-do-700.jpg") round;
-  border-radius: 30px;
-  margin: auto;
-  width: 80%;
-  height: 10vh;
-}
-
-.flip-card {
-  width: 150px;
-  height: 150px;
-}
-
-.flip-card-holder {
-  position: relative;
-  width: 100%;
-  height: 100%;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-perspective: 1000px;
-          perspective: 1000px;
-  -webkit-transform-style: preserve-3d;
-          transform-style: preserve-3d;
-}
-
-.flip-card-front, .flip-card-back {
-  position: absolute;
-}
-
-.flip-card-front {
-  background: blue;
-  width: 100%;
-  height: 100%;
-}
-
-.flip-card-back {
-  background: yellow;
-  width: 100%;
-  height: 100%;
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
-}
-
-.flip-card:hover .flip-card-holder {
-  -webkit-transform: rotateY(180deg);
-          transform: rotateY(180deg);
 }
 
 #contact {
@@ -610,6 +459,149 @@ img {
   opacity: 0.3;
 }
 
+#contact > span {
+  font-size: 2.5rem;
+  font-family: "Open Sans";
+}
+
+body {
+  max-width: 100%;
+  color: black;
+  background-color: #dedede;
+  -webkit-transition: 1s;
+  transition: 1s;
+  scroll-behavior: smooth;
+}
+
+html {
+  scroll-behavior: smooth;
+  -webkit-transition: 1s;
+  transition: 1s;
+}
+
+* {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  margin: 0 auto;
+}
+
+::-webkit-scrollbar {
+  width: 10px;
+  background: rgba(0, 0, 0, 0.5);
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #5f5f5f;
+  border-radius: 20px;
+}
+
+.container {
+  margin: 0 auto;
+  overflow-x: hidden;
+}
+
+img {
+  max-width: 100%;
+}
+
+.media-bar {
+  background-color: blue;
+  -webkit-transform: translateY(-125px);
+          transform: translateY(-125px);
+  height: 30px;
+}
+
+.section-header {
+  font-size: 3rem;
+}
+
+.underline {
+  width: 30%;
+  min-height: .5vh;
+  border-radius: 100px;
+  background-color: #e6e6e6;
+  background-image: -webkit-gradient(linear, left top, right top, from(#e6e6e6), color-stop(50%, #333333), to(#e6e6e6));
+  background-image: linear-gradient(90deg, #e6e6e6 0%, #333333 50%, #e6e6e6 100%);
+  margin: auto;
+}
+
+.card-about-outer {
+  background-color: #202122;
+  min-width: 15vw;
+  max-width: 15vw;
+  min-height: 30vh;
+  max-height: 30vh;
+  overflow: hidden;
+  padding: 30px 0 0 0;
+  -webkit-transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
+          transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
+  border: white solid 3px;
+  border-radius: 30px;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-box-shadow: inset 3px 3px 20px 3px #404040;
+          box-shadow: inset 3px 3px 20px 3px #404040;
+  z-index: 0;
+}
+
+.card-about-inner {
+  background: url("https://www.komputronik.pl/informacje/wp-content/uploads/2018/05/dron-do-700.jpg") round;
+  border-radius: 30px;
+  margin: auto;
+  width: 80%;
+  height: 10vh;
+}
+
+.flip-card {
+  width: 150px;
+  height: 150px;
+}
+
+.flip-card-holder {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  -webkit-transition: 0.5s;
+  transition: 0.5s;
+  -webkit-perspective: 1000px;
+          perspective: 1000px;
+  -webkit-transform-style: preserve-3d;
+          transform-style: preserve-3d;
+}
+
+.flip-card-front,
+.flip-card-back {
+  position: absolute;
+}
+
+.flip-card-front {
+  background: blue;
+  width: 100%;
+  height: 100%;
+}
+
+.flip-card-back {
+  background: yellow;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
+.flip-card:hover .flip-card-holder {
+  -webkit-transform: rotateY(180deg);
+          transform: rotateY(180deg);
+}
+
 .hvr-shutter-in-horizontal {
   display: inline-block;
   vertical-align: middle;
@@ -649,11 +641,15 @@ img {
   transition-timing-function: ease-out;
 }
 
-.hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+.hvr-shutter-in-horizontal:hover,
+.hvr-shutter-in-horizontal:focus,
+.hvr-shutter-in-horizontal:active {
   color: white;
 }
 
-.hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+.hvr-shutter-in-horizontal:hover:before,
+.hvr-shutter-in-horizontal:focus:before,
+.hvr-shutter-in-horizontal:active:before {
   -webkit-transform: scaleX(0);
   transform: scaleX(0);
 }
@@ -698,11 +694,15 @@ img {
   transition-timing-function: ease-out;
 }
 
-.hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+.hvr-shutter-out-horizontal:hover,
+.hvr-shutter-out-horizontal:focus,
+.hvr-shutter-out-horizontal:active {
   color: white;
 }
 
-.hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+.hvr-shutter-out-horizontal:hover:before,
+.hvr-shutter-out-horizontal:focus:before,
+.hvr-shutter-out-horizontal:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1);
 }

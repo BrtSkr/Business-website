@@ -2,6 +2,7 @@
     font-family: 'Open Sans';
     src: url(/assets/fonts/OpenSans-Regular.ttf);
 }
+
 //fonts
 $global-font: sans-serif;
 $global-font2: 'Open Sans';
@@ -25,10 +26,20 @@ $shadow-200: hsl(0, 0%, 100%);
 //gradients
 $gradient-100: linear-gradient(90deg, rgba(230, 230, 230, 1) 0%, rgba(51, 51, 51, 1) 50%, rgba(230, 230, 230, 1) 100%);
 $gradient-200:linear-gradient(to right, var(--clr-neutral-800), var(--clr-accent-600), var(--clr-neutral-900), var(--clr-neutral-800));
-%header{
+
+@import './navbar';
+@import './header';
+@import './services';
+@import './team';
+@import './about';
+@import './contact';
+
+
+
+%header {
     font-size: 2.5rem;
     font-family: $global-font2;
-    
+
 }
 
 
@@ -38,13 +49,12 @@ body {
     background-color: $neutral-100;
     transition: 1s;
     scroll-behavior: smooth;
-    transform: translateZ(0);
+
 }
 
 html {
     scroll-behavior: smooth;
     transition: 1s;
-    transform: translateZ(0);
 }
 
 * {
@@ -70,260 +80,35 @@ h6 {
     background-color: $scrollbar;
     border-radius: 20px;
 }
+
 //Element that holds everything inside
 .container {
     margin: 0 auto;
     overflow-x: hidden;
 }
 
-.navbar-main {
-    width: 100%;
-    min-height: 12vh;
-    background: rgba(105, 68, 139, 0.63);
-    top: 0;
-    position: fixed;
-    z-index: 3;
-
-}
-
-.navbar-holder {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    align-items: center;
-    align-content: flex-start;
-    max-width: 50%;
-    margin-left: 40vw;
-}
-
-.navbar-holder>*:nth-child(n) {
-    flex: 1 2 20%;
-    flex-flow: row wrap;
-    max-height: 20%;
-    text-align: center;
-    font-size: 2rem;
-}
-
-
-
-//to do
-.navbar-item-name {
-    font-size: 4ch;
-    bottom: 0;
-}
-
-.navbar-item {
-
-    text-decoration: none;
-    text-align: center;
-    color: $text-100;
-    font-family: $global-font2;
-    letter-spacing: 2px;
-}
-
-.navbar-item:hover {
-    background-color: #fff;
-    transition: 0.5s;
-}
-
-//sections
-
-#header {
-    width: 100%;
-    margin: 0 auto;
-    
-}
-
-.header-background {
-    background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg");
-    background-size: cover;
-    width: 100%;
-    min-height: 95vh;
-    overflow-y: auto; //after removing this 
-    z-index: -2;
-    animation: header-animation 2s reverse;
-    animation-iteration-count: 1;
-}
-.header-background button{
-    background: rgb(96, 79, 255);
-    border-radius: 30px;
-    border: $neutral-100;
-    min-width: 10vw;
-    min-height: 5vh;
-    font-family: $global-font2;
-    font-size: 1rem;
-    transform: translateY(5vh) translateZ(0);
-    cursor: pointer;
-    transition: 0.5s;
-}
-.header-background button:hover{
-  transform: scale(1.1) translateY(5vh) translateZ(0);
-  transition: 0.5s;
-  
-}
-.header-text {
-    font-size: 3.7rem;
-    color: $text-100;
-    font-weight: 600;
-    font-family: $global-font2;
-    letter-spacing: 2.5px;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 2;
-    transform: translateY(12.5vh);
-    text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
-    max-width: 90%;
-}
-
-.header-text> :nth-child(2) {
-    font-size: 1rem;
-    max-width: 80vw;
-    margin: auto;
-    text-shadow: 10px 10px 13px rgba(66, 68, 90, 1);
-
-}
-
-@keyframes header-animation {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
-}
-
-#services {
-    background: $neutral-100;
-    border-radius: 40px;
-    text-align: center;
-    color: $text-200;
-    display: block;
-    min-height: 80vh;
-    width: 95%;
-    margin: auto;
-    transform: translateY(-5vh);
-    font-size: 10vh;
-    box-shadow: 8px 8px 60px 15px $shadow-100;
-    z-index: 2;
-    font-family: sans-serif;
-    overflow: hidden;
-    
-}
-
-#team{
-    background-color: $neutral-100;
-    border-radius: 40px;
-    text-align: center;
-    color: $text-200;
-    display: block;
-    min-height: 80vh;
-    width: 100%;
-    margin: auto;
-    padding-top: 20px;
-    transform: translateY(-5vh);
-    font-size: 5vh;
-    box-shadow: 8px 8px 60px 15px $shadow-100;
-    z-index: 2;
-    font-family: sans-serif;
-    overflow: hidden;
-}
-img{
+img {
     max-width: 100%;
 }
-//flex for "Our team" section
-.team-flex{
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    gap: .5rem;
-    margin: auto;
-    margin-top: 5%;
-    padding-bottom: 30px;
-    width: 90%;
-    justify-self: center;
-    align-self: center;
-    
-}
-//flex properties for all of the children inside container with ".team-flex" class
-.team-flex>*:nth-child(n){
-    flex: 2 1 200px;
-    flex-flow: row;
-    max-height: 100vh;
-    justify-self: center;
-    align-self: center;
-    margin: auto;
-    font-size: 1.2rem; //after changing this property it will change only text that doesn't have class inside
-    text-align: left;
-    line-height: 1.4vh;
-}
-.team-flex img{
-    max-height: 50vh;
-    border-radius: 15px;
-    min-width:  12.5vw;
-}
+
+
 //currently it finds no purpose here
-.media-bar{
+.media-bar {
     background-color: blue;
     transform: translateY(-125px);
     height: 30px;
 
 }
-//Class created for purpose to customize text for roles in team (Our team section)
-.role{
-    color: rgb(19, 186, 241);
-    letter-spacing: .8px;
-    font-family: $global-font2;
-    font-size: 0.8rem;
-}
-//Class created for paragraph with information about staff
-.info-member{
-    letter-spacing: 1px;
-    font-size: .8rem;
-    color: $text-300;
-}
-//Section with information about company
-#about {
-    background-color: $neutral-100;
-    background: $neutral-100 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
-    background-attachment: fixed;
-    min-height: 40vh;
-    margin: auto;
-    padding: 10vh 0 20vh 0;
-    color: white;
-    box-shadow: 3px 3px 150px 90px black inset;
-    border-radius: 10px;
-    transform: translatez(0);
-}
-//Style for the name of the section
-.section-break-image h6 {
-    font-size: 3rem;
-    font-family: $global-font2;
-    letter-spacing: 1.5px;
-    text-align: left;
-    margin: 0 0 0 10vw;
-}
-//Style for description about company
-.section-break-image p {
-    font-size: 1.2rem;
-    text-align: left;
-    letter-spacing: .9px;
-
-    max-width: 50vw;
-    margin-left: 10vw;
-    padding: 0;
-
-}
 
 
-
-
+//text on the top inside some of the sections
 .section-header {
     font-size: 3rem;
+
 }
 
-.about-text {
+//gradient underline after every .section-header
+.underline {
     width: 30%;
     min-height: .5vh;
     border-radius: 100px;
@@ -333,100 +118,18 @@ img{
 
 }
 
-.about-flex {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 7.5%;
-    margin: auto;
-    justify-content: center;
-
-}
-
-.about-flex *:nth-child(n) {
-
-    flex: 3 1 50%;
-    flex-flow: column wrap;
-    margin: auto;
-    margin-top: 20vh;
-    content: '';
-    font-size: 3vh;
-
-}
-
-.about-flex *:nth-child(1) {
-    height: 50vh;
-    margin-left: -10%;
-}
-
-.about-image {
-    border-radius: 100px;
-    width: 50vw;
-}
-
-.services-flex {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0 auto;
-    margin-top: 7%;
-    justify-content: center;
-    max-width: 70vw;
-    gap: .5rem;
-    transition: 0.5s;
-    perspective: 1000px;
-    transform-style: preserve-3d;
-}
-.services-flex>*:nth-child(n) {
-    flex: 2 1 250px;
-    margin: auto;
-    padding-top: 3vh;
-    content: '';
-    font-size: 1.5vh;
-    border-radius: 30px;
-}
-
-.icons {
-    font-size: 3rem;
-}
 
 
 
-.card {
-    min-height: 40vh;
-
-    min-width: 10vw;
-    border: white solid 3px;
-    transition: 0.5s;
-    box-shadow: inset 3px 3px 20px 3px $shadow-100;
-    text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
-    letter-spacing: 1.5px;
-}
-
-.card:hover {
-
-    border: green 3px solid;
-    transition: 0.5s;
-    transform: scale(1.05);
-    z-index: 2;
-}
 
 
-.card-header {
-    font-size: 1.5rem;
-}
 
-.card-description {
-    font-size: 1rem;
-    color: $text-300;
-    
-}
 
-.about-flex-wrap {
-    display: flex;
-    flex: 1 1 50%;
-    flex-wrap: wrap;
-}
+
+
+
+
+
 
 .card-about-outer {
     background-color: $neutral-700;
@@ -452,11 +155,12 @@ img{
     height: 10vh;
 }
 
-.flip-card{
+.flip-card {
     width: 150px;
     height: 150px;
 }
-.flip-card-holder{
+
+.flip-card-holder {
     position: relative;
     width: 100%;
     height: 100%;
@@ -464,83 +168,30 @@ img{
     perspective: 1000px;
     transform-style: preserve-3d;
 }
-.flip-card-front, .flip-card-back{
+
+.flip-card-front,
+.flip-card-back {
     position: absolute;
-    
+
 }
-.flip-card-front{
+
+.flip-card-front {
     background: blue;
     width: 100%;
     height: 100%;
 }
-.flip-card-back{
+
+.flip-card-back {
     background: yellow;
     width: 100%;
     height: 100%;
     transform: rotateY(180deg);
 }
-.flip-card:hover .flip-card-holder{
+
+.flip-card:hover .flip-card-holder {
     transform: rotateY(180deg);
 }
-//Section with contact details
-#contact{
-    background: $neutral-700 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
-    background-position: bottom;
-    margin-top: -10vh; 
-    min-height: 50vh;
-    padding-top: 12.5vh;
-    box-shadow: 3px 3px 130px 150px black inset;
-}
-//Text displayed above two elements inside footer
-#contact>span{
-    @extend %header; //Adds font size and font family
-    color: $text-100;
-    letter-spacing: 1.5px;
-    margin-left: 5.5vw;
-    
-}
-//Flex for two elements inside footer (Elements: Location of business and phone number)
-.footer-flex{
-  display: flex;
-  color: $text-300;
-  gap: 2vh;
-  max-height: 50vh;
-  margin-left: 7vw;
-  flex-direction: column;  
-  flex-wrap: wrap;
-  bottom: 0;
-  
-}
-//Styling for all the childs inside footer flex
-.footer-flex>*:nth-child(n){
-  flex: 1 1;
-  color: $neutral-100;
-}
-//Text inside footer that displays information about street or location 
-.footer-text{
- margin-top: 1rem;
- font-size: 1.2rem;
- text-shadow: 25px 9px 16px $shadow-100;
-}
-//Styling icon inside footer text
-.footer-text i{
-    font-size: 2.3rem;
-    padding-right: .5rem;
-    
-}
-//Styling for text under .footer-text (for example: street name, phone number)
-.footer-text div{
-    color: gray;
-    letter-spacing: .7px;
-    font-size: 1rem;
-    
 
-}
-#contact img{
-    max-height: 20vh;
-    margin-top: 10vh;
-    opacity: 0.3;
-}
 
 
 
@@ -561,8 +212,9 @@ img{
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-  }
-  .hvr-shutter-in-horizontal:before {
+}
+
+.hvr-shutter-in-horizontal:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -581,17 +233,23 @@ img{
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  .hvr-shutter-in-horizontal:hover, .hvr-shutter-in-horizontal:focus, .hvr-shutter-in-horizontal:active {
+}
+
+.hvr-shutter-in-horizontal:hover,
+.hvr-shutter-in-horizontal:focus,
+.hvr-shutter-in-horizontal:active {
     color: white;
-  }
-  .hvr-shutter-in-horizontal:hover:before, .hvr-shutter-in-horizontal:focus:before, .hvr-shutter-in-horizontal:active:before {
+}
+
+.hvr-shutter-in-horizontal:hover:before,
+.hvr-shutter-in-horizontal:focus:before,
+.hvr-shutter-in-horizontal:active:before {
     -webkit-transform: scaleX(0);
     transform: scaleX(0);
-  }
-  
-  /* Shutter Out Horizontal */
-  .hvr-shutter-out-horizontal {
+}
+
+/* Shutter Out Horizontal */
+.hvr-shutter-out-horizontal {
     display: inline-block;
     vertical-align: middle;
     -webkit-transform: perspective(1px) translateZ(0);
@@ -603,8 +261,9 @@ img{
     transition-property: color;
     -webkit-transition-duration: 0.3s;
     transition-duration: 0.3s;
-  }
-  .hvr-shutter-out-horizontal:before {
+}
+
+.hvr-shutter-out-horizontal:before {
     content: "";
     position: absolute;
     z-index: -1;
@@ -623,11 +282,17 @@ img{
     transition-duration: 0.3s;
     -webkit-transition-timing-function: ease-out;
     transition-timing-function: ease-out;
-  }
-  .hvr-shutter-out-horizontal:hover, .hvr-shutter-out-horizontal:focus, .hvr-shutter-out-horizontal:active {
+}
+
+.hvr-shutter-out-horizontal:hover,
+.hvr-shutter-out-horizontal:focus,
+.hvr-shutter-out-horizontal:active {
     color: white;
-  }
-  .hvr-shutter-out-horizontal:hover:before, .hvr-shutter-out-horizontal:focus:before, .hvr-shutter-out-horizontal:active:before {
+}
+
+.hvr-shutter-out-horizontal:hover:before,
+.hvr-shutter-out-horizontal:focus:before,
+.hvr-shutter-out-horizontal:active:before {
     -webkit-transform: scaleX(1);
     transform: scaleX(1);
-  }
+}
