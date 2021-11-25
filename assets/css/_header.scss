@@ -5,11 +5,12 @@
 }
 
 .header-background {
+    margin-top: -25vh;
     background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg");
     background-size: cover;
     width: 100%;
     min-height: 95vh;
-    overflow-y: auto; //after removing this 
+    padding-top: 10vh;
     z-index: -2;
     animation: header-animation 2s reverse;
     animation-iteration-count: 1;
@@ -31,34 +32,22 @@
   transition: 0.5s;
   
 }
-.header-text {
-    font-size: 3.7rem;
-    color: $text-100;
-    font-weight: 600;
-    font-family: $global-font2;
-    letter-spacing: 2.5px;
-    text-align: center;
-    margin: 0 auto;
-    z-index: 2;
-    transform: translateY(12.5vh);
-    text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
-    max-width: 90%;
-}
+
 
 .header-text> :nth-child(2) {
-    font-size: 1rem;
+    font-size: 2vh;
     max-width: 80vw;
     margin: auto;
     text-shadow: 10px 10px 13px rgba(66, 68, 90, 1);
 
 }
 
-@keyframes header-animation {
-    0% {
-        transform: scale(1);
-    }
-
-    100% {
-        transform: scale(1.1);
-    }
-}
+//@keyframes header-animation {
+//    0% {
+//        transform: scale(1);
+//    }
+//
+//    100% {
+//        transform: scale(1.1);
+//    }
+//}
