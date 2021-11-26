@@ -21,24 +21,19 @@
     display: flex;
     flex-wrap: wrap;
     flex-direction: row;
-    gap: .5rem;
-    margin: auto;
-    margin-top: 5%;
+    gap: 1vh;
+    margin: 5vh auto 0 auto;
     padding-bottom: 30px;
-    width: 90%;
-    justify-self: center;
-    align-self: center;
-
+    max-width: 90%;
 }
 
 //flex properties for all of the children inside container with ".team-flex" class
 .team-flex>*:nth-child(n) {
-    flex: 2 1 200px;
-    flex-flow: row;
-    max-height: 100vh;
+    flex: 2 1 20vh;    
     justify-self: center;
     align-self: center;
-    margin: auto;
+    justify-content: center;    
+    max-height: 100vh;
     font-size: 1.2rem; //after changing this property it will change only text that doesn't have class inside
     text-align: left;
     line-height: 1.4vh;
@@ -53,14 +48,15 @@
 //Class created for purpose to customize text for roles in team (Our team section)
 .role {
     color: rgb(19, 186, 241);
-    letter-spacing: .8px;
+    letter-spacing: .1vh;
     font-family: $global-font2;
-    font-size: 0.8rem;
+    font-size: 1.7vh;
 }
 
 //Class created for paragraph with information about staff
 .info-member {
     letter-spacing: 1px;
-    font-size: .8rem;
+    font-size: 1.5vh;
+    max-width: 32vh;
     color: $text-300;
 }
