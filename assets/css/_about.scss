@@ -1,63 +1,64 @@
 //Section with information about company
 #about {
-    background-color: $neutral-100;
-    background: $neutral-100 url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
-    background-attachment: fixed;
-    min-height: 40vh;
-    margin: auto;
-    padding: 10vh 0 20vh 0;
-    color: white;
-    box-shadow: 3px 3px 150px 90px black inset;
-    border-radius: 10px;
-    transform: translatez(0);
+  background-color: $neutral-100;
+  background: $neutral-100
+    url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+  background-attachment: fixed;
+  min-height: 40vh;
+  margin: -10vh auto 0 auto;
+  padding: 12vh 0 20vh 0;
+  color: white;
+  box-shadow: 0px 5px 25px 20px rgba(0, 0, 0, 0.329),
+    0px 5px 25px 20px rgba(0, 0, 0, 0.329),
+    0px 5px 25px 20px rgba(0, 0, 0, 0.329) inset;
+  border-radius: 5px;
+  transform: translatez(0);
+  z-index: -4;
+  position: relative;
 }
 //Style for the name of the section
 .section-break-image h6 {
-    font-size: 3rem;
-    font-family: $global-font2;
-    letter-spacing: 1.5px;
-    text-align: left;
-    margin: 0 0 0 10vw;
+  font-size: 3rem;
+  font-family: $global-font2;
+  letter-spacing: 1.5px;
+  text-align: left;
+  margin: 0 0 0 10vw;
 }
 //Style for description about company
 .section-break-image p {
-    font-size: 1.2rem;
-    text-align: left;
-    letter-spacing: .9px;
+  font-size: 1.2rem;
+  text-align: left;
+  letter-spacing: 0.9px;
 
-    max-width: 50vw;
-    margin-left: 10vw;
-    padding: 0;
-
+  max-width: 50vw;
+  margin-left: 10vw;
+  padding: 0;
 }
 .about-flex {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin-top: 7.5%;
-    margin: auto;
-    justify-content: center;
-
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 7.5%;
+  margin: auto;
+  justify-content: center;
 }
 
 .about-flex *:nth-child(n) {
-
-    flex: 3 1 50%;
-    flex-flow: column wrap;
-    margin: auto;
-    margin-top: 20vh;
-    content: '';
-    font-size: 3vh;
-
+  flex: 3 1 50%;
+  flex-flow: column wrap;
+  margin: auto;
+  margin-top: 20vh;
+  content: "";
+  font-size: 3vh;
 }
 
 .about-flex *:nth-child(1) {
-    height: 50vh;
-    margin-left: -10%;
+  height: 50vh;
+  margin-left: -10%;
 }
 
 .about-flex-wrap {
-    display: flex;
-    flex: 1 1 50%;
-    flex-wrap: wrap;
+  display: flex;
+  flex: 1 1 50%;
+  flex-wrap: wrap;
 }

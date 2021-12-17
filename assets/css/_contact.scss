@@ -1,0 +1,33 @@
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #111111;
+  min-height: 30vh;
+  color: $text-100;
+
+  .footer-category {
+    padding: 0;
+    margin: auto;
+    font-family: $global-font;
+    .footer-heading {
+      font-size: 6vh;
+      text-align: center;
+      padding: 0;
+    }
+
+    .footer-subheading {
+      white-space: pre-line;
+      text-transform: uppercase;
+      color: gray;
+      padding: 0;
+      font-size: 2vh;
+      text-align: center;
+      text-decoration-style: none;
+    }
+    .footer-subheading a {
+      text-decoration: none;
+      color: white;
+    }
+  }
+}

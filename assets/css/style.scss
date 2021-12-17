@@ -60,27 +60,17 @@ p {
   padding: 0;
   margin: 0;
 }
-.header-text {
-  font-size: 5vh;
-  color: $text-100;
-  font-weight: 600;
-  font-family: $global-font2;
-  letter-spacing: 2.5px;
-  text-align: center;
-  margin: 0 auto;
-  z-index: 2;
-  transform: translateY(15vh);
-  text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
-  max-width: 120vh;
-}
+
 
 .navbar-main {
+  top: 0;
+  position: fixed;
   display: flex;
   flex: 1 1 50%;
   justify-content: center;
-  position: sticky;
-  top: 0;
-  max-width: 100%;
+  
+  
+  min-width: 100%;
   min-height: 5vh;
   margin: auto;
   background-color: #121212d0;
@@ -321,39 +311,7 @@ img {
   transform: scaleX(1);
 }
 
-.footer-flex {
-  display: flex;
-  flex-direction: row;
-  flex-wrap: wrap;
-  background-color: #111111;
-  min-height: 30vh;
-  color: $text-100;
 
-  .footer-category {
-    padding: 0;
-    margin: auto;
-    font-family: $global-font;
-    .footer-heading {
-      font-size: 6vh;
-      text-align: center;
-      padding: 0;
-    }
-
-    .footer-subheading {
-      white-space: pre-line;
-      text-transform: uppercase;
-      color: gray;
-      padding: 0;
-      font-size: 2vh;
-      text-align: center;
-      text-decoration-style: none;
-    }
-    .footer-subheading a {
-      text-decoration: none;
-      color: white;
-    }
-  }
-}
 #team {
   background-color: $neutral-100;
   border-radius: 5px;

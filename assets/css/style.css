@@ -1,216 +1,59 @@
 @font-face {
   font-family: "Open Sans";
-  src: url(/assets/fonts/OpenSans-Regular.ttf);
-}
+  src: url(/assets/fonts/OpenSans-Regular.ttf); }
 
 #header {
   width: 100%;
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 .header-background {
-  margin-top: -25vh;
-  background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg");
+  background-color: #111;
   background-size: cover;
   width: 100%;
-  min-height: 95vh;
-  padding-top: 15vh;
+  min-height: 105vh;
   z-index: -2;
   animation: header-animation 2s reverse;
-  -webkit-animation-iteration-count: 1;
-          animation-iteration-count: 1;
-}
+  animation-iteration-count: 1; }
 
-.header-background button {
-  background: #604fff;
-  border-radius: 30px;
-  border: #dedede;
-  min-width: 10vw;
-  min-height: 5vh;
-  font-family: "Open Sans";
-  font-size: 1rem;
-  -webkit-transform: translateY(5vh) translateZ(0);
-          transform: translateY(5vh) translateZ(0);
-  cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.header-background button:hover {
-  -webkit-transform: scale(1.1) translateY(5vh) translateZ(0);
-          transform: scale(1.1) translateY(5vh) translateZ(0);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.header-text > :nth-child(2) {
-  font-size: 2vh;
-  max-width: 80vw;
-  margin: auto;
-  text-shadow: 10px 10px 13px #42445a;
-}
-
-#services {
-  background: #dedede;
-  border-radius: 5px;
-  text-align: center;
-  color: black;
-  display: block;
-  min-height: 85vh;
-  width: 100%;
-  margin: auto;
-  -webkit-transform: translateY(-5vh);
-          transform: translateY(-5vh);
-  font-size: 10vh;
-  -webkit-box-shadow: 0 1px 10px 2px #00000026;
-          box-shadow: 0 1px 10px 2px #00000026;
-  z-index: 2;
-  font-family: sans-serif;
-  overflow: hidden;
-  padding: 1vh;
-}
-
-.services-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin: 0 auto;
-  margin-top: 7%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  max-width: 70vw;
-  gap: 4vh;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
-
-.services-flex > *:nth-child(n) {
-  -webkit-box-flex: 2;
-      -ms-flex: 2 1 250px;
-          flex: 2 1 250px;
-  margin: auto;
-  padding-top: 3vh;
-  content: '';
-  font-size: 1.5vh;
-  border-radius: 5px;
-}
-
-.icons {
-  font-size: 3rem;
-}
-
-.card:hover {
-  -webkit-box-shadow: 0px 0px 10px 15px #00000026;
-          box-shadow: 0px 0px 10px 15px #00000026;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-  -webkit-transform: scale(1.02);
-          transform: scale(1.02);
-  z-index: 2;
-}
-
-.card-header {
-  font-size: 1.5rem;
-}
-
-.card-description {
-  margin: 3vh 0 0 0;
-  font-size: 1rem;
-  color: #404040;
-}
-
-#about {
-  background-color: #dedede;
-  background: #dedede url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
-  background-attachment: fixed;
-  min-height: 40vh;
-  margin: auto;
-  padding: 10vh 0 20vh 0;
+.header-message {
+  font-size: 5vh;
   color: white;
-  -webkit-box-shadow: 3px 3px 150px 90px black inset;
-          box-shadow: 3px 3px 150px 90px black inset;
-  border-radius: 10px;
-  -webkit-transform: translatez(0);
-          transform: translatez(0);
-}
+  text-align: center;
+  width: 100%;
+  height: 80vh;
+  background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg") 100%;
+  top: 50%;
+  bottom: 50%;
+  position: relative;
+  transform: translateY(10vh);
+  display: flex;
+  justify-content: center;
+  justify-self: center;
+  flex-direction: column; }
 
-.section-break-image h6 {
-  font-size: 3rem;
+.header-submessage {
+  position: relative;
   font-family: "Open Sans";
-  letter-spacing: 1.5px;
-  text-align: left;
-  margin: 0 0 0 10vw;
-}
+  width: 75%;
+  margin-bottom: 3vh; }
 
-.section-break-image p {
-  font-size: 1.2rem;
-  text-align: left;
-  letter-spacing: .9px;
-  max-width: 50vw;
-  margin-left: 10vw;
-  padding: 0;
-}
+.header-button {
+  width: 20vh;
+  height: 5vh;
+  margin: 0 auto;
+  background-color: white;
+  border: none;
+  border-radius: 5px; }
 
-.about-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  margin-top: 7.5%;
-  margin: auto;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-}
+.bigger-submessage {
+  font-size: 7vh; }
 
-.about-flex *:nth-child(n) {
-  -webkit-box-flex: 3;
-      -ms-flex: 3 1 50%;
-          flex: 3 1 50%;
-  -webkit-box-orient: vertical;
-  -webkit-box-direction: normal;
-      -ms-flex-flow: column wrap;
-          flex-flow: column wrap;
-  margin: auto;
-  margin-top: 20vh;
-  content: '';
-  font-size: 3vh;
-}
-
-.about-flex *:nth-child(1) {
-  height: 50vh;
-  margin-left: -10%;
-}
-
-.about-flex-wrap {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-}
-
-p {
-  padding: 0;
-  margin: 0;
-}
+.smaller-submessage {
+  font-size: 3vh; }
 
 .header-text {
+  background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg");
+  background-size: 200%;
   font-size: 5vh;
   color: white;
   font-weight: 600;
@@ -219,26 +62,159 @@ p {
   text-align: center;
   margin: 0 auto;
   z-index: 2;
-  -webkit-transform: translateY(15vh);
-          transform: translateY(15vh);
+  transform: translateY(15vh);
   text-shadow: 15px 15px 20px #42445a;
-  max-width: 120vh;
-}
+  max-width: 120vh; }
+
+.header-text > :nth-child(2) {
+  font-size: 2vh;
+  max-width: 80vw;
+  margin: auto;
+  text-shadow: 10px 10px 13px #42445a; }
+
+#services {
+  background: #dedede;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  display: block;
+  min-height: 100vh;
+  width: 100%;
+  margin: auto;
+  transform: translateY(-5vh);
+  font-size: 10vh;
+  box-shadow: 0 1px 10px 2px #00000026;
+  z-index: 4;
+  font-family: "Open Sans";
+  overflow: hidden;
+  padding: 10vh 0; }
+
+.services-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 7%;
+  justify-content: center;
+  max-width: 90%;
+  gap: 4vh;
+  transition: 0.5s; }
+
+.services-flex > *:nth-child(n) {
+  flex: 1 1 250px;
+  margin: auto;
+  padding-top: 3vh;
+  content: '';
+  font-size: 1.5vh;
+  border-radius: 5px; }
+
+.icons {
+  font-size: 3rem; }
+
+.card:hover {
+  box-shadow: 0px 0px 10px 15px #00000026;
+  border-radius: 30px;
+  transition: 0.5s;
+  transform: scale(1.02);
+  z-index: 2; }
+
+.card-description {
+  margin: 3vh 0 0 0;
+  font-size: 1rem;
+  color: #404040; }
+
+#about {
+  background-color: #dedede;
+  background: #dedede url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
+  background-attachment: fixed;
+  min-height: 40vh;
+  margin: -10vh auto 0 auto;
+  padding: 12vh 0 20vh 0;
+  color: white;
+  box-shadow: 0px 5px 25px 20px rgba(0, 0, 0, 0.329), 0px 5px 25px 20px rgba(0, 0, 0, 0.329), 0px 5px 25px 20px rgba(0, 0, 0, 0.329) inset;
+  border-radius: 5px;
+  transform: translatez(0);
+  z-index: -4;
+  position: relative; }
+
+.section-break-image h6 {
+  font-size: 3rem;
+  font-family: "Open Sans";
+  letter-spacing: 1.5px;
+  text-align: left;
+  margin: 0 0 0 10vw; }
+
+.section-break-image p {
+  font-size: 1.2rem;
+  text-align: left;
+  letter-spacing: 0.9px;
+  max-width: 50vw;
+  margin-left: 10vw;
+  padding: 0; }
+
+.about-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin-top: 7.5%;
+  margin: auto;
+  justify-content: center; }
+
+.about-flex *:nth-child(n) {
+  flex: 3 1 50%;
+  flex-flow: column wrap;
+  margin: auto;
+  margin-top: 20vh;
+  content: "";
+  font-size: 3vh; }
+
+.about-flex *:nth-child(1) {
+  height: 50vh;
+  margin-left: -10%; }
+
+.about-flex-wrap {
+  display: flex;
+  flex: 1 1 50%;
+  flex-wrap: wrap; }
+
+.footer-flex {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  background-color: #111111;
+  min-height: 30vh;
+  color: white; }
+  .footer-flex .footer-category {
+    padding: 0;
+    margin: auto;
+    font-family: sans-serif; }
+    .footer-flex .footer-category .footer-heading {
+      font-size: 6vh;
+      text-align: center;
+      padding: 0; }
+    .footer-flex .footer-category .footer-subheading {
+      white-space: pre-line;
+      text-transform: uppercase;
+      color: gray;
+      padding: 0;
+      font-size: 2vh;
+      text-align: center;
+      text-decoration-style: none; }
+    .footer-flex .footer-category .footer-subheading a {
+      text-decoration: none;
+      color: white; }
+
+p {
+  padding: 0;
+  margin: 0; }
 
 .navbar-main {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-flex: 1;
-      -ms-flex: 1 1 50%;
-          flex: 1 1 50%;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  position: -webkit-sticky;
-  position: sticky;
   top: 0;
-  max-width: 100%;
+  position: fixed;
+  display: flex;
+  flex: 1 1 50%;
+  justify-content: center;
+  min-width: 100%;
   min-height: 5vh;
   margin: auto;
   background-color: #121212d0;
@@ -248,17 +224,14 @@ p {
   gap: 3px;
   font-size: 3vh;
   padding: 2vh 3vh;
-  font-family: "Open Sans";
-}
+  font-family: "Open Sans"; }
 
 .navbar-main > div:nth-child(1) {
   margin-right: auto;
-  font-size: 6vh;
-}
+  font-size: 6vh; }
 
 .navbar-main > div:nth-child(2) {
-  margin-right: auto;
-}
+  margin-right: auto; }
 
 .navbar-main div a button {
   font-size: 2.5vh;
@@ -270,41 +243,29 @@ p {
   border-radius: 60px;
   min-width: 15vh;
   min-height: 7.5vh;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  transition: 0.5s; }
 
 .navbar-main div a button:hover {
-  background-image: -webkit-gradient(linear, left top, right top, from(rgba(255, 255, 255, 0)), color-stop(40%, rgba(255, 255, 255, 0)), color-stop(99%, rgba(255, 255, 255, 0.7)));
   background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.7) 99%);
   background-repeat: no-repeat;
   background-size: 200% 100%;
-  -webkit-transition: background-size 1s, background-color 1s;
   transition: background-size 1s, background-color 1s;
   cursor: pointer;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  transition: 0.5s; }
 
 body {
   max-width: 100%;
   color: black;
   background-color: #dedede;
-  -webkit-transition: 1s;
   transition: 1s;
-  scroll-behavior: smooth;
-}
+  scroll-behavior: smooth; }
 
 html {
   scroll-behavior: smooth;
-  -webkit-transition: 1s;
-  transition: 1s;
-}
+  transition: 1s; }
 
 * {
-  -webkit-box-sizing: border-box;
-          box-sizing: border-box;
-}
+  box-sizing: border-box; }
 
 body,
 h1,
@@ -313,51 +274,41 @@ h3,
 h4,
 h5,
 h6 {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 ::-webkit-scrollbar {
   width: 10px;
-  background: rgba(0, 0, 0, 0.5);
-}
+  background: rgba(0, 0, 0, 0.5); }
 
 ::-webkit-scrollbar-thumb {
   background-color: #5f5f5f;
-  border-radius: 20px;
-}
+  border-radius: 20px; }
 
 .container {
-  margin: 0 auto;
-}
+  margin: 0 auto; }
 
 img {
-  max-width: 100%;
-}
+  max-width: 100%; }
 
 .media-bar {
   background-color: blue;
-  -webkit-transform: translateY(-125px);
-          transform: translateY(-125px);
-  height: 30px;
-}
+  transform: translateY(-125px);
+  height: 30px; }
 
 .section-header {
   font-size: 3rem;
   text-transform: uppercase;
   font-weight: 800;
-  font-family: "Open Sans";
-}
+  font-family: "Open Sans"; }
 
 .underline {
   width: 90%;
   padding: 0;
   min-height: 1vh;
-  -webkit-box-shadow: 0 1px 10px 2px black inset;
-          box-shadow: 0 1px 10px 2px black inset;
+  box-shadow: 0 1px 10px 2px black inset;
   background-color: #e6e6e6;
   border-radius: 0 0 30px 30px;
-  margin: auto;
-}
+  margin: auto; }
 
 .card-about-outer {
   background-color: #202122;
@@ -367,39 +318,32 @@ img {
   max-height: 30vh;
   overflow: hidden;
   padding: 30px 0 0 0;
-  -webkit-transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
-          transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
+  transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
   border: white solid 3px;
   border-radius: 30px;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: inset 3px 3px 20px 3px #404040;
-          box-shadow: inset 3px 3px 20px 3px #404040;
-  z-index: 0;
-}
+  box-shadow: inset 3px 3px 20px 3px #404040;
+  z-index: 0; }
 
 .card-about-inner {
   background: url("https://www.komputronik.pl/informacje/wp-content/uploads/2018/05/dron-do-700.jpg") round;
   border-radius: 30px;
   margin: auto;
   width: 80%;
-  height: 10vh;
-}
+  height: 10vh; }
 
 .hvr-shutter-in-horizontal {
   display: inline-block;
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   background: #2098d1;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
+  transition-duration: 0.3s; }
 
 .hvr-shutter-in-horizontal:before {
   content: "";
@@ -415,28 +359,22 @@ img {
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-transition-property: transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
+  transition-timing-function: ease-out; }
 
 .hvr-shutter-in-horizontal:hover,
 .hvr-shutter-in-horizontal:focus,
 .hvr-shutter-in-horizontal:active {
-  color: white;
-}
+  color: white; }
 
 .hvr-shutter-in-horizontal:hover:before,
 .hvr-shutter-in-horizontal:focus:before,
 .hvr-shutter-in-horizontal:active:before {
   -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-}
+  transform: scaleX(0); }
 
 /* Shutter Out Horizontal */
 .hvr-shutter-out-horizontal {
@@ -444,15 +382,13 @@ img {
   vertical-align: middle;
   -webkit-transform: perspective(1px) translateZ(0);
   transform: perspective(1px) translateZ(0);
-  -webkit-box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-          box-shadow: 0 0 1px rgba(0, 0, 0, 0);
+  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
   position: relative;
   background: #e1e1e1;
   -webkit-transition-property: color;
   transition-property: color;
   -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
+  transition-duration: 0.3s; }
 
 .hvr-shutter-out-horizontal:before {
   content: "";
@@ -468,71 +404,22 @@ img {
   -webkit-transform-origin: 50%;
   transform-origin: 50%;
   -webkit-transition-property: transform;
-  -webkit-transition-property: -webkit-transform;
-  transition-property: -webkit-transform;
   transition-property: transform;
-  transition-property: transform, -webkit-transform;
   -webkit-transition-duration: 0.3s;
   transition-duration: 0.3s;
   -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
+  transition-timing-function: ease-out; }
 
 .hvr-shutter-out-horizontal:hover,
 .hvr-shutter-out-horizontal:focus,
 .hvr-shutter-out-horizontal:active {
-  color: white;
-}
+  color: white; }
 
 .hvr-shutter-out-horizontal:hover:before,
 .hvr-shutter-out-horizontal:focus:before,
 .hvr-shutter-out-horizontal:active:before {
   -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-.footer-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  background-color: #111111;
-  min-height: 30vh;
-  color: white;
-}
-
-.footer-flex .footer-category {
-  padding: 0;
-  margin: auto;
-  font-family: sans-serif;
-}
-
-.footer-flex .footer-category .footer-heading {
-  font-size: 6vh;
-  text-align: center;
-  padding: 0;
-}
-
-.footer-flex .footer-category .footer-subheading {
-  white-space: pre-line;
-  text-transform: uppercase;
-  color: gray;
-  padding: 0;
-  font-size: 2vh;
-  text-align: center;
-  -webkit-text-decoration-style: none;
-          text-decoration-style: none;
-}
-
-.footer-flex .footer-category .footer-subheading a {
-  text-decoration: none;
-  color: white;
-}
+  transform: scaleX(1); }
 
 #team {
   background-color: #dedede;
@@ -544,82 +431,58 @@ img {
   width: 100%;
   margin: auto;
   padding-top: 20px;
-  -webkit-transform: translateY(-5vh);
-          transform: translateY(-5vh);
+  transform: translateY(-5vh);
   font-size: 5vh;
-  -webkit-box-shadow: 8px 8px 60px 15px #404040;
-          box-shadow: 8px 8px 60px 15px #404040;
+  box-shadow: 8px 8px 60px 15px #404040;
   z-index: 2;
   font-family: sans-serif;
-  overflow: hidden;
-}
+  overflow: hidden; }
 
 .team-flex {
-  display: -webkit-box;
-  display: -ms-flexbox;
   display: flex;
-  -ms-flex-wrap: wrap;
-      flex-wrap: wrap;
-  -webkit-box-orient: horizontal;
-  -webkit-box-direction: normal;
-      -ms-flex-direction: row;
-          flex-direction: row;
+  flex-wrap: wrap;
+  flex-direction: row;
   justify-self: center;
-  -ms-flex-item-align: center;
-      align-self: center;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
+  align-self: center;
+  justify-content: center;
   gap: 3vh;
   margin: 5vh auto 0 auto;
   padding-bottom: 30px;
   max-width: 90%;
-  cursor: default;
-}
+  cursor: default; }
 
 .card {
   cursor: default;
   min-height: 40vh;
   min-width: 10vw;
   border: 0px solid;
-  -webkit-transition: 0.5s;
   transition: 0.5s;
-  -webkit-box-shadow: 2px 10px 10px 10px #00000026;
-          box-shadow: 2px 10px 10px 10px #00000026;
+  box-shadow: 2px 10px 10px 10px #00000026;
   text-shadow: 15px 15px 20px #42445a;
   letter-spacing: 1.5px;
-  padding: 1vh;
-}
+  padding: 1vh; }
 
 .team-flex > div {
   padding: 1vh;
   max-height: 100vh;
-  -webkit-box-shadow: 0 1px 10px 5px rgba(59, 59, 59, 0.363);
-          box-shadow: 0 1px 10px 5px rgba(59, 59, 59, 0.363);
+  box-shadow: 0 1px 10px 5px rgba(59, 59, 59, 0.363);
   text-align: left;
   line-height: 1.4vh;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  transition: 0.5s; }
 
 .team-flex > div:hover {
-  -webkit-box-shadow: 0 1px 10px 10px rgba(59, 59, 59, 0.521);
-          box-shadow: 0 1px 10px 10px rgba(59, 59, 59, 0.521);
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
-}
+  box-shadow: 0 1px 10px 10px rgba(59, 59, 59, 0.521);
+  transition: 0.5s; }
 
 .team-flex img {
   max-height: 50vh;
   border-radius: 5px 5px 10px 10px;
-  min-width: 12.5vw;
-}
+  min-width: 12.5vw; }
 
 .name {
   margin: 10px 0;
   text-transform: uppercase;
-  font-size: 1.2rem;
-}
+  font-size: 1.2rem; }
 
 .role {
   text-transform: uppercase;
@@ -627,13 +490,10 @@ img {
   letter-spacing: 0.5px;
   font-family: "Open Sans";
   font-size: 1.7vh;
-  margin: 10px 0;
-}
+  margin: 10px 0; }
 
 .info-member {
   letter-spacing: 1px;
   font-size: 1.5vh;
   max-width: 32vh;
-  color: #404040;
-}
-/*# sourceMappingURL=style.css.map */
+  color: #404040; }
