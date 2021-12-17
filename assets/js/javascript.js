@@ -7,3 +7,4 @@ x.onclick = function(){
     window.scrollTo({top: y})
 } 
 }) 
+

@@ -1,19 +1,19 @@
 #services {
     background: $neutral-100;
-    border-radius: 40px;
+    border-radius: 5px;
     text-align: center;
     color: $text-200;
     display: block;
-    min-height: 80vh;
-    width: 95%;
+    min-height: 85vh;
+    width: 100%;
     margin: auto;
     transform: translateY(-5vh);
     font-size: 10vh;
-    box-shadow: 8px 8px 60px 15px $shadow-100;
+    box-shadow: 0 1px 10px 2px #00000026;
     z-index: 2;
     font-family: sans-serif;
     overflow: hidden;
-
+    padding: 1vh;
 }
 
 .services-flex {
@@ -24,10 +24,8 @@
     margin-top: 7%;
     justify-content: center;
     max-width: 70vw;
-    gap: .5rem;
+    gap: 4vh;
     transition: 0.5s;
-    perspective: 1000px;
-    transform-style: preserve-3d;
 }
 
 .services-flex>*:nth-child(n) {
@@ -36,29 +34,19 @@
     padding-top: 3vh;
     content: '';
     font-size: 1.5vh;
-    border-radius: 30px;
+    border-radius: 5px;
 }
 
 .icons {
     font-size: 3rem;
 }
 
-.card {
-    min-height: 40vh;
 
-    min-width: 10vw;
-    border: white solid 3px;
-    transition: 0.5s;
-    box-shadow: inset 3px 3px 20px 3px $shadow-100;
-    text-shadow: 15px 15px 20px rgba(66, 68, 90, 1);
-    letter-spacing: 1.5px;
-}
 
 .card:hover {
-
-    border: green 3px solid;
+     box-shadow: 0px 0px 10px 15px #00000026;
     transition: 0.5s;
-    transform: scale(1.05);
+    transform: scale(1.02);
     z-index: 2;
 }
 
@@ -67,6 +55,7 @@
 }
 
 .card-description {
+    margin: 3vh 0 0 0;
     font-size: 1rem;
     color: $text-300;
 }
