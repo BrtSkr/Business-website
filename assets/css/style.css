@@ -1,31 +1,83 @@
 @font-face {
-  font-family: "Open Sans";
-  src: url(/assets/fonts/OpenSans-Regular.ttf); }
+  font-family: 'readex';
+  src: url(/assets/fonts/ReadexPro-Regular.ttf) format("truetype"); }
 
-#header {
+.navbar-main {
+  top: 0;
+  position: relative;
+  display: flex;
+  flex: 1 1 50%;
+  justify-content: center;
+  min-width: 100%;
+  min-height: 5vh;
+  margin: auto;
+  background-color: #111;
+  z-index: 3;
+  color: white;
+  gap: 3px;
+  font-size: 3vh;
+  padding: 2vh 3vh;
+  font-family: "readex";
+  font-weight: 800;
+  letter-spacing: 2px;
+  text-transform: uppercase; }
+
+.navbar-main > div:nth-child(1) {
+  margin-right: auto;
+  font-size: 6vh; }
+
+.navbar-main > div:nth-child(2) {
+  margin-right: auto; }
+
+.navbar-main div a button {
+  font-size: 2.5vh;
+  margin-top: 0.5vh;
+  color: white;
+  background-color: transparent;
+  background-size: 0% 100%;
+  border: none;
+  border-radius: 60px;
+  min-width: 15vh;
+  min-height: 7.5vh;
+  transition: 0.5s; }
+
+.navbar-main div a button:hover {
+  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.7) 99%);
+  background-repeat: no-repeat;
+  background-size: 200% 100%;
+  transition: background-size 1s, background-color 1s;
+  cursor: pointer;
+  transition: 0.5s; }
+
+.header {
   width: 100%;
   margin: 0 auto; }
 
 .header-background {
-  background-color: #111;
   background-size: cover;
   width: 100%;
-  min-height: 105vh;
+  min-height: 74.9vh;
+  position: relative;
   z-index: -2;
   animation: header-animation 2s reverse;
   animation-iteration-count: 1; }
 
 .header-message {
   font-size: 5vh;
+  letter-spacing: 5px;
   color: white;
   text-align: center;
   width: 100%;
-  height: 80vh;
-  background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg") 100%;
+  height: 70vh;
+  background: url("/assets/images/bg-pattern-intro-mobile.svg") no-repeat #ff627c;
+  background-size: 150vw;
+  background-position: 30%;
+  border-radius: 0 0 0 50%/10rem;
   top: 50%;
   bottom: 50%;
+  padding: 1vh;
   position: relative;
-  transform: translateY(10vh);
+  filter: saturate(1.2);
   display: flex;
   justify-content: center;
   justify-self: center;
@@ -33,23 +85,17 @@
 
 .header-submessage {
   position: relative;
-  font-family: "Open Sans";
-  width: 75%;
+  font-family: "readex";
+  max-width: 80vh;
   margin-bottom: 3vh; }
 
-.header-button {
-  width: 20vh;
-  height: 5vh;
-  margin: 0 auto;
-  background-color: white;
-  border: none;
-  border-radius: 5px; }
-
 .bigger-submessage {
-  font-size: 7vh; }
+  font-size: 6.5vh;
+  transform: rotate(-2deg); }
 
 .smaller-submessage {
-  font-size: 3vh; }
+  font-size: 2vh;
+  letter-spacing: 2px; }
 
 .header-text {
   background: url("https://mythsandmountains.com/wp-content/uploads/2018/10/myths-and-mountains-and-beyond.jpg");
@@ -72,38 +118,68 @@
   margin: auto;
   text-shadow: 10px 10px 13px #42445a; }
 
-#services {
-  background: #dedede;
+.header-button {
+  width: 20vh;
+  height: 6vh;
+  margin: 0 auto;
+  background-color: white;
+  border: none;
+  border-radius: 5px;
+  position: relative; }
+
+.header-arrow {
+  display: block;
+  margin: -5vh 0 0 0;
+  z-index: 3;
+  mix-blend-mode: difference;
+  position: relative; }
+
+.header-arrow:hover .header-arrow {
+  margin: 0; }
+
+.services {
   border-radius: 5px;
   text-align: center;
   color: black;
   display: block;
-  min-height: 100vh;
+  min-height: 70vh;
   width: 100%;
   margin: auto;
   transform: translateY(-5vh);
-  font-size: 10vh;
-  box-shadow: 0 1px 10px 2px #00000026;
   z-index: 4;
-  font-family: "Open Sans";
-  overflow: hidden;
-  padding: 10vh 0; }
+  font-family: "readex";
+  padding: 5vh 1vh; }
 
 .services-flex {
   display: flex;
   flex-wrap: wrap;
   flex-direction: row;
   margin: 0 auto;
-  margin-top: 7%;
+  margin-top: 5%;
   justify-content: center;
   max-width: 90%;
+  height: 100%;
   gap: 4vh;
   transition: 0.5s; }
+
+.services-flex::before {
+  content: "";
+  background: url(/assets/images/undraw_launching_re_tomg.svg) no-repeat center;
+  background-position-y: -4rem;
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0; }
 
 .services-flex > *:nth-child(n) {
   flex: 1 1 250px;
   margin: auto;
   padding-top: 3vh;
+  background-color: #dedede;
+  z-index: 1;
   content: '';
   font-size: 1.5vh;
   border-radius: 5px; }
@@ -115,23 +191,101 @@
   box-shadow: 0px 0px 10px 15px #00000026;
   border-radius: 30px;
   transition: 0.5s;
-  transform: scale(1.02);
-  z-index: 2; }
+  transform: scale(1.02); }
+
+.bi > h6 {
+  text-transform: uppercase; }
 
 .card-description {
   margin: 3vh 0 0 0;
   font-size: 1rem;
   color: #404040; }
 
-#about {
+#team {
   background-color: #dedede;
-  background: #dedede url("https://bigcitypizza.pl/wp-content/uploads/2020/10/bg_new-1.jpg");
-  background-attachment: fixed;
+  border-radius: 5px;
+  text-align: center;
+  color: black;
+  display: block;
+  min-height: 80vh;
+  width: 100%;
+  margin: auto;
+  padding-top: 20px;
+  transform: translateY(-5vh);
+  font-size: 5vh;
+  z-index: 2;
+  font-family: sans-serif;
+  overflow: hidden; }
+
+.team-flex {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-self: center;
+  align-self: center;
+  justify-content: center;
+  gap: 3vh;
+  margin: 5vh auto 0 auto;
+  padding-bottom: 30px;
+  max-width: 90%;
+  cursor: default; }
+
+.card {
+  cursor: default;
   min-height: 40vh;
-  margin: -10vh auto 0 auto;
+  min-width: 10vw;
+  border: 0px solid;
+  transition: 0.5s;
+  box-shadow: 2px 10px 10px 10px #00000026;
+  text-shadow: 15px 15px 20px #42445a;
+  letter-spacing: 1.5px;
+  padding: 1vh; }
+
+.team-flex > div {
+  padding: 1vh;
+  max-height: 100vh;
+  box-shadow: 0 1px 10px 5px rgba(59, 59, 59, 0.363);
+  text-align: left;
+  line-height: 1.4vh;
+  transition: 0.5s; }
+
+.team-flex > div:hover {
+  box-shadow: 0 1px 10px 10px rgba(59, 59, 59, 0.521);
+  transition: 0.5s;
+  border-radius: 20px; }
+
+.team-flex img {
+  max-height: 50vh;
+  border-radius: 5px 5px 10px 10px;
+  min-width: 12.5vw; }
+
+.name {
+  margin: 10px 0;
+  text-transform: uppercase;
+  font-size: 1.2rem; }
+
+.role {
+  text-transform: uppercase;
+  color: #13baf1;
+  letter-spacing: 0.5px;
+  font-family: "Open Sans";
+  font-size: 1.7vh;
+  margin: 10px 0; }
+
+.info-member {
+  letter-spacing: 1px;
+  font-size: 1.5vh;
+  max-width: 32vh;
+  color: #404040; }
+
+.about {
+  background-color: #fc6161;
+  background-attachment: fixed;
+  background-size: cover;
+  min-height: 60vh;
+  margin: -5vh auto 10vh auto;
   padding: 12vh 0 20vh 0;
   color: white;
-  box-shadow: 0px 5px 25px 20px rgba(0, 0, 0, 0.329), 0px 5px 25px 20px rgba(0, 0, 0, 0.329), 0px 5px 25px 20px rgba(0, 0, 0, 0.329) inset;
   border-radius: 5px;
   transform: translatez(0);
   z-index: -4;
@@ -187,7 +341,7 @@
   .footer-flex .footer-category {
     padding: 0;
     margin: auto;
-    font-family: sans-serif; }
+    font-family: "readex"; }
     .footer-flex .footer-category .footer-heading {
       font-size: 6vh;
       text-align: center;
@@ -208,56 +362,13 @@ p {
   padding: 0;
   margin: 0; }
 
-.navbar-main {
-  top: 0;
-  position: fixed;
-  display: flex;
-  flex: 1 1 50%;
-  justify-content: center;
-  min-width: 100%;
-  min-height: 5vh;
-  margin: auto;
-  background-color: #121212d0;
-  z-index: 3;
-  border-radius: 0 0 15px 15px;
-  color: white;
-  gap: 3px;
-  font-size: 3vh;
-  padding: 2vh 3vh;
-  font-family: "Open Sans"; }
-
-.navbar-main > div:nth-child(1) {
-  margin-right: auto;
-  font-size: 6vh; }
-
-.navbar-main > div:nth-child(2) {
-  margin-right: auto; }
-
-.navbar-main div a button {
-  font-size: 2.5vh;
-  margin-top: 0.5vh;
-  color: white;
-  background-color: transparent;
-  background-size: 0% 100%;
-  border: none;
-  border-radius: 60px;
-  min-width: 15vh;
-  min-height: 7.5vh;
-  transition: 0.5s; }
-
-.navbar-main div a button:hover {
-  background-image: linear-gradient(to right, rgba(255, 255, 255, 0) 0%, rgba(255, 255, 255, 0) 40%, rgba(255, 255, 255, 0.7) 99%);
-  background-repeat: no-repeat;
-  background-size: 200% 100%;
-  transition: background-size 1s, background-color 1s;
-  cursor: pointer;
-  transition: 0.5s; }
+.gray {
+  color: gray; }
 
 body {
   max-width: 100%;
   color: black;
   background-color: #dedede;
-  transition: 1s;
   scroll-behavior: smooth; }
 
 html {
@@ -290,47 +401,21 @@ h6 {
 img {
   max-width: 100%; }
 
-.media-bar {
-  background-color: blue;
-  transform: translateY(-125px);
-  height: 30px; }
-
 .section-header {
-  font-size: 3rem;
-  text-transform: uppercase;
-  font-weight: 800;
-  font-family: "Open Sans"; }
+  font-size: 4rem;
+  font-family: "readex";
+  position: relative;
+  padding: 0;
+  margin: 0;
+  z-index: 2; }
 
 .underline {
   width: 90%;
   padding: 0;
-  min-height: 1vh;
-  box-shadow: 0 1px 10px 2px black inset;
-  background-color: #e6e6e6;
+  min-height: .5vh;
+  box-shadow: 0 1px 15px 5px #ffbbdd;
   border-radius: 0 0 30px 30px;
   margin: auto; }
-
-.card-about-outer {
-  background-color: #202122;
-  min-width: 15vw;
-  max-width: 15vw;
-  min-height: 30vh;
-  max-height: 30vh;
-  overflow: hidden;
-  padding: 30px 0 0 0;
-  transform: scale(1) rotate(10deg) skew(-40deg, 0deg);
-  border: white solid 3px;
-  border-radius: 30px;
-  transition: 0.5s;
-  box-shadow: inset 3px 3px 20px 3px #404040;
-  z-index: 0; }
-
-.card-about-inner {
-  background: url("https://www.komputronik.pl/informacje/wp-content/uploads/2018/05/dron-do-700.jpg") round;
-  border-radius: 30px;
-  margin: auto;
-  width: 80%;
-  height: 10vh; }
 
 .hvr-shutter-in-horizontal {
   display: inline-block;
@@ -420,80 +505,3 @@ img {
 .hvr-shutter-out-horizontal:active:before {
   -webkit-transform: scaleX(1);
   transform: scaleX(1); }
-
-#team {
-  background-color: #dedede;
-  border-radius: 5px;
-  text-align: center;
-  color: black;
-  display: block;
-  min-height: 80vh;
-  width: 100%;
-  margin: auto;
-  padding-top: 20px;
-  transform: translateY(-5vh);
-  font-size: 5vh;
-  box-shadow: 8px 8px 60px 15px #404040;
-  z-index: 2;
-  font-family: sans-serif;
-  overflow: hidden; }
-
-.team-flex {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: row;
-  justify-self: center;
-  align-self: center;
-  justify-content: center;
-  gap: 3vh;
-  margin: 5vh auto 0 auto;
-  padding-bottom: 30px;
-  max-width: 90%;
-  cursor: default; }
-
-.card {
-  cursor: default;
-  min-height: 40vh;
-  min-width: 10vw;
-  border: 0px solid;
-  transition: 0.5s;
-  box-shadow: 2px 10px 10px 10px #00000026;
-  text-shadow: 15px 15px 20px #42445a;
-  letter-spacing: 1.5px;
-  padding: 1vh; }
-
-.team-flex > div {
-  padding: 1vh;
-  max-height: 100vh;
-  box-shadow: 0 1px 10px 5px rgba(59, 59, 59, 0.363);
-  text-align: left;
-  line-height: 1.4vh;
-  transition: 0.5s; }
-
-.team-flex > div:hover {
-  box-shadow: 0 1px 10px 10px rgba(59, 59, 59, 0.521);
-  transition: 0.5s; }
-
-.team-flex img {
-  max-height: 50vh;
-  border-radius: 5px 5px 10px 10px;
-  min-width: 12.5vw; }
-
-.name {
-  margin: 10px 0;
-  text-transform: uppercase;
-  font-size: 1.2rem; }
-
-.role {
-  text-transform: uppercase;
-  color: #13baf1;
-  letter-spacing: 0.5px;
-  font-family: "Open Sans";
-  font-size: 1.7vh;
-  margin: 10px 0; }
-
-.info-member {
-  letter-spacing: 1px;
-  font-size: 1.5vh;
-  max-width: 32vh;
-  color: #404040; }

@@ -1,19 +1,16 @@
-#services {
-    background: $neutral-100;
+.services {
     border-radius: 5px;
     text-align: center;
     color: $text-200;
     display: block;
-    min-height: 100vh;
+    min-height: 70vh;
     width: 100%;
     margin: auto;
     transform: translateY(-5vh);
-    font-size: 10vh;
-    box-shadow: 0 1px 10px 2px #00000026;
     z-index: 4;
-    font-family: $global-font2;
-    overflow: hidden;
-    padding: 10vh 0;
+    font-family: $global-font;
+    padding: 5vh 1vh;
+   
 }
 
 .services-flex {
@@ -21,20 +18,39 @@
     flex-wrap: wrap;
     flex-direction: row;
     margin: 0 auto;
-    margin-top: 7%;
+    margin-top: 5%;
     justify-content: center;
     max-width: 90%;
+    height: 100%;
     gap: 4vh;
     transition: 0.5s;
 }
 
+.services-flex::before{
+    content: "";
+    background: url(/assets/images/undraw_launching_re_tomg.svg) no-repeat center;
+    background-position-y: -4rem;
+    background-size: cover;
+    opacity: 0.7;
+    position: absolute;
+   
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 0;
+}
+
+
 .services-flex>*:nth-child(n) {
     flex: 1 1 250px;
     margin: auto;
-    padding-top: 3vh;
+    padding-top: 3vh; 
+    background-color: $neutral-100;
+    z-index: 1;
     content: '';
     font-size: 1.5vh;
     border-radius: 5px;
+    
 }
 
 .icons {
@@ -48,9 +64,11 @@
      border-radius: 30px;
     transition: 0.5s;
     transform: scale(1.02);
-    z-index: 2;
 }
-
+//text below icons inside cards
+.bi>h6{
+    text-transform: uppercase;
+}
 
 
 .card-description {
