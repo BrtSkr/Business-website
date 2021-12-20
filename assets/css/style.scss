@@ -1,12 +1,14 @@
-
+//This file contains all of the universal classes, variables
+//and also contains some of the styles that do not belong in certain places like about section etc.
 @font-face {
-  font-family: 'readex';
-  src: url(/assets/fonts/ReadexPro-Regular.ttf) format('truetype');
+  font-family: "readex";
+  src: url(/assets/fonts/ReadexPro-Regular.ttf) format("truetype");
 }
 
 //fonts
-$global-font: 'readex';
+$global-font: "readex";
 $global-font2: "Open Sans";
+
 //colors
 $accent-400: hsla(201, 44%, 59%, 0.4);
 $accent-500: hsl(201, 44%, 59%);
@@ -17,13 +19,16 @@ $neutral-600: hsl(228, 19%, 5%);
 $neutral-700: hsl(210, 3%, 13%);
 $scrollbar: rgb(95, 95, 95);
 $scrollbar-thumb: rgba(0, 0, 0, 0.5);
+
 //text colors
 $text-100: hsl(0, 0%, 100%);
 $text-200: hsl(0, 0%, 0%);
 $text-300: hsl(0, 0%, 25%);
+
 //shadows
 $shadow-100: hsl(0, 0%, 25%);
 $shadow-200: hsl(0, 0%, 100%);
+
 //gradients
 $gradient-100: linear-gradient(
   90deg,
@@ -44,8 +49,13 @@ $gradient-300: linear-gradient(
   rgba(128, 233, 81, 1) 50%,
   rgba(124, 124, 124, 1) 100%
 );
-$gradient-400: linear-gradient(277deg, rgba(82,82,82,1) 0%, rgba(42,42,42,1) 50%, rgba(88,88,88,1) 100%);
-
+$gradient-400: linear-gradient(
+  277deg,
+  rgba(82, 82, 82, 1) 0%,
+  rgba(42, 42, 42, 1) 50%,
+  rgba(88, 88, 88, 1) 100%
+);
+//imported scss files
 @import "./navbar";
 @import "./header";
 @import "./services";
@@ -62,7 +72,7 @@ p {
   margin: 0;
 }
 
-.gray{
+.gray {
   color: gray;
 }
 
@@ -101,15 +111,14 @@ h6 {
   background-color: $scrollbar;
   border-radius: 20px;
 }
-
+img {
+  max-width: 100%;
+}
 //Element that holds everything inside
 .container {
   margin: 0 auto;
 }
 
-img {
-  max-width: 100%;
-}
 
 
 //text on the top inside some of the sections
@@ -126,111 +135,29 @@ img {
 .underline {
   width: 90%;
   padding: 0;
-  min-height: .5vh;
-  box-shadow: 0 1px 15px 5px rgb(255, 187, 221) ;
+  min-height: 0.5vh;
+  box-shadow: 0 1px 15px 5px rgb(255, 187, 221);
   //background-color: hsl(323, 100%, 82%);
   border-radius: 0 0 30px 30px;
   margin: auto;
 }
 
-
-
-
-.hvr-shutter-in-horizontal {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  background: #2098d1;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-
-.hvr-shutter-in-horizontal:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
-  bottom: 0;
-  left: 0;
-  right: 0;
-  background: #e1e1e1;
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
-}
-
-.hvr-shutter-in-horizontal:hover,
-.hvr-shutter-in-horizontal:focus,
-.hvr-shutter-in-horizontal:active {
+.scroll-up{
+  position: fixed;
   color: white;
-}
-
-.hvr-shutter-in-horizontal:hover:before,
-.hvr-shutter-in-horizontal:focus:before,
-.hvr-shutter-in-horizontal:active:before {
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-}
-
-/* Shutter Out Horizontal */
-.hvr-shutter-out-horizontal {
-  display: inline-block;
-  vertical-align: middle;
-  -webkit-transform: perspective(1px) translateZ(0);
-  transform: perspective(1px) translateZ(0);
-  box-shadow: 0 0 1px rgba(0, 0, 0, 0);
-  position: relative;
-  background: #e1e1e1;
-  -webkit-transition-property: color;
-  transition-property: color;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-}
-
-.hvr-shutter-out-horizontal:before {
-  content: "";
-  position: absolute;
-  z-index: -1;
-  top: 0;
+  font-size: 6vh;
+  text-align: center;
+  width: 8vh;
+  height: 7vh;
+  margin: 0 -10vh 0 0;
+  border-radius: 5px;
+  background-color: #111;
   bottom: 0;
-  left: 0;
   right: 0;
-  background: #2098d1;
-  -webkit-transform: scaleX(0);
-  transform: scaleX(0);
-  -webkit-transform-origin: 50%;
-  transform-origin: 50%;
-  -webkit-transition-property: transform;
-  transition-property: transform;
-  -webkit-transition-duration: 0.3s;
-  transition-duration: 0.3s;
-  -webkit-transition-timing-function: ease-out;
-  transition-timing-function: ease-out;
+  cursor: pointer;
+  transition: .5s;
 }
-
-.hvr-shutter-out-horizontal:hover,
-.hvr-shutter-out-horizontal:focus,
-.hvr-shutter-out-horizontal:active {
-  color: white;
+.scroll-up:hover{
+  opacity: 0.8;
+  transition: .5s;
 }
-
-.hvr-shutter-out-horizontal:hover:before,
-.hvr-shutter-out-horizontal:focus:before,
-.hvr-shutter-out-horizontal:active:before {
-  -webkit-transform: scaleX(1);
-  transform: scaleX(1);
-}
-
-

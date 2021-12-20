@@ -1,78 +1,71 @@
 .services {
-    border-radius: 5px;
-    text-align: center;
-    color: $text-200;
-    display: block;
-    min-height: 70vh;
-    width: 100%;
-    margin: auto;
-    transform: translateY(-5vh);
-    z-index: 4;
-    font-family: $global-font;
-    padding: 5vh 1vh;
-   
+  border-radius: 5px;
+  text-align: center;
+  color: $text-200;
+  display: block;
+  min-height: 70vh;
+  width: 100%;
+  margin: auto;
+  transform: translateY(-5vh);
+  z-index: 4;
+  font-family: $global-font;
+  padding: 5vh 1vh;
 }
 
 .services-flex {
-    display: flex;
-    flex-wrap: wrap;
-    flex-direction: row;
-    margin: 0 auto;
-    margin-top: 5%;
-    justify-content: center;
-    max-width: 90%;
-    height: 100%;
-    gap: 4vh;
-    transition: 0.5s;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  margin: 0 auto;
+  margin-top: 5%;
+  justify-content: center;
+  max-width: 90%;
+  height: 100%;
+  gap: 4vh;
+  transition: 0.5s;
 }
 
-.services-flex::before{
-    content: "";
-    background: url(/assets/images/undraw_launching_re_tomg.svg) no-repeat center;
-    background-position-y: -4rem;
-    background-size: cover;
-    opacity: 0.7;
-    position: absolute;
-   
-    top: 0;
-    right: 0;
-    left: 0;
-    bottom: 0;
+.services-flex::before {
+  content: "";
+  background: url(/assets/images/undraw_launching_re_tomg.svg) no-repeat center;
+  background-position-y: -4rem;
+  background-size: cover;
+  opacity: 0.7;
+  position: absolute;
+  top: 0;
+  right: 0;
+  left: 0;
+  bottom: 0;
 }
 
-
-.services-flex>*:nth-child(n) {
-    flex: 1 1 250px;
-    margin: auto;
-    padding-top: 3vh; 
-    background-color: $neutral-100;
-    z-index: 1;
-    content: '';
-    font-size: 1.5vh;
-    border-radius: 5px;
-    
+.services-flex > *:nth-child(n) {
+  flex: 1 1 250px;
+  margin: auto;
+  padding-top: 3vh;
+  background-color: $neutral-100;
+  z-index: 1;
+  content: "";
+  font-size: 1.5vh;
+  border-radius: 5px;
 }
 
 .icons {
-    font-size: 3rem;
+  font-size: 3rem;
 }
-
-
 
 .card:hover {
-     box-shadow: 0px 0px 10px 15px #00000026;
-     border-radius: 30px;
-    transition: 0.5s;
-    transform: scale(1.02);
+  box-shadow: 0px 0px 10px 15px #00000026;
+  border-radius: 30px;
+  transition: 0.5s;
+  transform: scale(1.02);
 }
 //text below icons inside cards
-.bi>h6{
-    text-transform: uppercase;
+.bi > h6 {
+  text-transform: uppercase;
 }
 
-
 .card-description {
-    margin: 3vh 0 0 0;
-    font-size: 1rem;
-    color: $text-300;
+  margin: 3vh 0 0 0;
+  font-size: 1rem;
+  color: $text-300;
 }

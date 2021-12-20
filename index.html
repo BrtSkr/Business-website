@@ -21,7 +21,6 @@
   </head>
 
   <body>
-    <!--Navbar-->
 
     <!--container-->
     <div class="container">
@@ -30,11 +29,21 @@
            <nav class="navbar-main">
             <div>Company Name</div>
             <div>
-                <a href=""><button>Home</button></a>
-                <a href=""><button>About</button></a>
-                <a href=""><button>Services</button></a>
-                <a href=""><button>Team</button></a>
-                <a href=""><button>Contact</button></a>
+                <a href=""><button class="nav-button">Home</button></a>
+                <a href=""><button class="nav-button">About</button></a>
+                <a href=""><button class="nav-button">Services</button></a>
+                <a href=""><button class="nav-button">Team</button></a>
+                <a href=""><button class="nav-button">Contact</button></a>
+            </div>
+        </nav> 
+           <nav class="navbar-fixed">
+            <div>Company Name</div>
+            <div>
+                <a href=""><button class="nav-button">Home</button></a>
+                <a href=""><button class="nav-button">About</button></a>
+                <a href=""><button class="nav-button">Services</button></a>
+                <a href=""><button class="nav-button">Team</button></a>
+                <a href=""><button class="nav-button">Contact</button></a>
             </div>
         </nav> 
         <div class="header-background">
@@ -49,11 +58,15 @@
               dignissimos? Eaque, rem dicta id dignissimos assumenda
               reprehenderit?
             </h6>
-            <button class="header-button">See More</button>
+            <button class="header-button">See More
+               <i class="bi bi-arrow-down header-arrow"></i></button>
+            
           </div>
         </div>
       </header>
-      <!--First section-->
+<!--End of header-->
+
+      <!--Services section-->
       <section class="section-prop services">
         <div class="section-holder">
           <div class="section-header">What we provide</div>
@@ -107,8 +120,9 @@
           </div>
         </div>
       </section>
+     <!--End of services section-->
 
-      <!--Second section-->
+      <!--About section-->
       <section class="section-break-image about">
         <div>
           <h6>About Lorem</h6>
@@ -119,8 +133,8 @@
           </div>
         </div>
       </section>
-
-      <!--Third section-->
+      <!--End of About section-->
+      <!--Info about team section-->
       <section id="team">
         <span class="section-header">Our Team</span>
         <div class="team-flex">
@@ -199,8 +213,8 @@
           </div>
         </div>
       </section>
-
-      <!--Fourth section-->
+      <!--End of about team section-->
+      <!--footer-->
       <footer class="footer-flex">
         <div class="footer-category">
           <p class="footer-heading">Contact</p>
@@ -216,8 +230,14 @@
           <p class="footer-subheading">1434 Terra Cotta Street</p>
         </div>
       </footer>
+      <!--End of footer-->
     </div>
- 
+    <!--Scroll up button-->
+    <div class="scroll-up">
+      <i class="bi bi-arrow-90deg-up"></i>
+    </div>
+
+
     <script src="assets/js/javascript.js"></script>
     <script
       src="https://kit.fontawesome.com/5090cbfc5e.js"
