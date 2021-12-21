@@ -14,7 +14,7 @@
 }
 .about::before {
   content: "";
-  background: url(/assets/images/undraw_interview_re_e5jn.svg) no-repeat;
+  background: url(../images/undraw_interview_re_e5jn.svg) no-repeat;
   background-position: center;
   background-position-x: left;
   background-size: 50%;
@@ -27,7 +27,7 @@
 }
 .about::after {
   content: "";
-  background: url(/assets/images/undraw_on_the_office_re_cxds.svg) no-repeat;
+  background: url(../images/undraw_on_the_office_re_cxds.svg) no-repeat;
   background-size: 50%;
   background-position: right;
   position: absolute;
@@ -77,7 +77,7 @@
 }
 
 .about-card:hover {
-  transform: scale(1.15) rotateZ(5deg);
+  transform: scale(1.1) rotateZ(1deg);
   box-shadow: 0 0 1px 3px white, 0 0 10px 3px white;
   transition: 0.5s;
   z-index: 10;

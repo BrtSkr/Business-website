@@ -2,7 +2,7 @@
 //and also contains some of the styles that do not belong in certain places like about section etc.
 @font-face {
   font-family: "readex";
-  src: url(/assets/fonts/ReadexPro-Regular.ttf) format("truetype");
+  src: url(../fonts/ReadexPro-Regular.ttf) format("truetype");
 }
 
 //fonts
@@ -119,8 +119,6 @@ img {
   margin: 0 auto;
 }
 
-
-
 //text on the top inside some of the sections
 .section-header {
   font-size: 4rem;
@@ -142,7 +140,7 @@ img {
   margin: auto;
 }
 
-.scroll-up{
+.scroll-up {
   position: fixed;
   color: white;
   font-size: 6vh;
@@ -155,9 +153,9 @@ img {
   bottom: 0;
   right: 0;
   cursor: pointer;
-  transition: .5s;
+  transition: 0.5s;
 }
-.scroll-up:hover{
+.scroll-up:hover {
   opacity: 0.8;
-  transition: .5s;
+  transition: 0.5s;
 }
