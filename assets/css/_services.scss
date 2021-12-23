@@ -3,10 +3,9 @@
   text-align: center;
   color: $text-200;
   display: block;
-  min-height: 70vh;
+  min-height: 80vh;
   width: 100%;
-  margin: auto;
-  transform: translateY(-5vh);
+  margin-top: -5vh;
   z-index: 4;
   font-family: $global-font;
   padding: 5vh 1vh;

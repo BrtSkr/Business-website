@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <meta name="author" content="Bartosz Skrzydelski" />
     <title>Business Name</title>
-
+    <link rel="stylesheet" href="assets/aos/aos.css" />
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
@@ -24,53 +24,54 @@
     <!--container-->
     <div class="container">
       <!--Header-->
-      <header class="header">
-        <nav class="navbar-main">
-          <div>Company Name</div>
-          <div>
-            <a><button class="nav-button homeBtn nBtn">Home</button></a>
-            <a><button class="nav-button aboutBtn">About</button></a>
-            <a><button class="nav-button serviceBtn">Services</button></a>
-            <a><button class="nav-button  teamBtn">Team</button></a>
-            <a><button class="nav-button contactBtn">Contact</button></a>
-          </div>
-        </nav>
-        <nav class="navbar-fixed">
-          <div>Company Name</div>
-          <div>
-            <a><button class="nav-button homeBtn">Home</button></a>
-            <a><button class="nav-button aboutBtn">About</button></a>
-            <a><button class="nav-button serviceBtn">Services</button></a>
-            <a><button class="nav-button teamBtn">Team</button></a>
-            <a><button class="nav-button contactBtn">Contact</button></a>
-          </div>
-        </nav>
-        <nav class="navbar-mobile">
-          <div>
-            <button class="nav-mbtn">
-              <i class="bi bi-list"></i>
-            </button>
-          </div>
-          <div>Company Name</div>
-        </nav>
-        <nav class="navbar-mobile-fixed">
-          <div>
-            <button class="nav-mbtn">
-              <i class="bi bi-list"></i>
-            </button>
-          </div>
-          <div>Company Name</div>
-        </nav>
-        <div class="nav-slide">
-          <button class="nav-close"><i class="bi bi-x"></i></button>
-          <div>
-            <a><button class="nav-button homeBtn">Home</button></a>
-            <a><button class="nav-button aboutBtn">About</button></a>
-            <a><button class="nav-button serviceBtn">Services</button></a>
-            <a><button class="nav-button teamBtn">Team</button></a>
-            <a><button class="nav-button contactBtn">Contact</button></a>
-          </div>
+      <nav class="navbar-main">
+        <div>Company Name</div>
+        <div>
+          <a><button class="nav-button homeBtn nBtn">Home</button></a>
+
+          <a><button class="nav-button serviceBtn">Services</button></a>
+          <a><button class="nav-button aboutBtn">About</button></a>
+          <a><button class="nav-button teamBtn">Team</button></a>
+          <a><button class="nav-button contactBtn">Contact</button></a>
         </div>
+      </nav>
+      <nav class="navbar-fixed">
+        <div>Company Name</div>
+        <div>
+          <a><button class="nav-button homeBtn">Home</button></a>
+          <a><button class="nav-button serviceBtn">Services</button></a>
+          <a><button class="nav-button aboutBtn">About</button></a>
+          <a><button class="nav-button teamBtn">Team</button></a>
+          <a><button class="nav-button contactBtn">Contact</button></a>
+        </div>
+      </nav>
+      <nav class="navbar-mobile">
+        <div>
+          <button class="nav-mbtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div>Company Name</div>
+      </nav>
+      <nav class="navbar-mobile-fixed">
+        <div>
+          <button class="nav-mbtn">
+            <i class="bi bi-list"></i>
+          </button>
+        </div>
+        <div>Company Name</div>
+      </nav>
+      <div class="nav-slide">
+        <button class="nav-close"><i class="bi bi-x"></i></button>
+        <div>
+          <a><button class="nav-button homeBtn">Home</button></a>
+          <a><button class="nav-button serviceBtn">Services</button></a>
+          <a><button class="nav-button aboutBtn">About</button></a>
+          <a><button class="nav-button teamBtn">Team</button></a>
+          <a><button class="nav-button contactBtn">Contact</button></a>
+        </div>
+      </div>
+      <header data-aos="fade-up" data-aos-delay="2000" class="header">
         <div class="header-background">
           <div class="header-message">
             <h2 class="header-submessage bigger-submessage">
@@ -83,7 +84,7 @@
               dignissimos? Eaque, rem dicta id dignissimos assumenda
               reprehenderit?
             </h6>
-            <button class="header-button">
+            <button class="header-button seeMore">
               See More <i class="bi bi-arrow-down header-arrow"></i>
             </button>
           </div>
@@ -92,7 +93,11 @@
       <!--End of header-->
 
       <!--Services section-->
-      <section class="section-prop services">
+      <section
+        data-aos="fade-up"
+        data-aos-offset="500"
+        class="section-prop services"
+      >
         <div class="section-holder">
           <div class="section-header">What we provide</div>
 
@@ -148,7 +153,11 @@
       <!--End of services section-->
 
       <!--About section-->
-      <section class="section-break-image about">
+      <section
+        data-aos="zoom-in"
+        data-aos-offset="500"
+        class="section-break-image about"
+      >
         <div>
           <p class="about-heading">About us</p>
           <span class="flying-line"></span>
@@ -203,7 +212,7 @@
       </section>
       <!--End of About section-->
       <!--Info about team section-->
-      <section class="team">
+      <section data-aos="fade-right" class="team">
         <span class="section-header">Our Team</span>
         <div class="team-flex">
           <div>
@@ -283,13 +292,13 @@
       </section>
       <!--End of about team section-->
       <!--footer-->
-      <footer class="footer-flex">
+      <footer class="footer-flex footer">
         <div class="footer-category">
           <p class="footer-heading">Contact</p>
           <p class="footer-subheading">Phone: 669 105 704</p>
           <p class="footer-subheading">Bartosz Skrzydelski</p>
           <p class="footer-subheading">
-            <a href="mailto:arcadam111@gmail.com">email</a>
+            <a class="footer-a" href="mailto:arcadam111@gmail.com">email</a>
           </p>
         </div>
         <div class="footer-category">
@@ -304,7 +313,17 @@
     <div class="scroll-up">
       <i class="bi bi-arrow-90deg-up"></i>
     </div>
-
+    <!--Loader-->
+    <div class="loader">
+       <div class="loader-img"></div>
+     </div> 
+    <script src="assets/aos/aos.js"></script>
+    <script>
+      addEventListener("load", AOS.refresh);
+      AOS.init({
+        duration: 2000,
+      });
+    </script>
     <script src="assets/js/javascript.js"></script>
     <script
       src="https://kit.fontawesome.com/5090cbfc5e.js"

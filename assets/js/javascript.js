@@ -48,43 +48,56 @@ closeBtn.addEventListener("click", closeNav);
 //Event listener for scrollUpBtn (It just scrolls up to the top of the document)
 //Might be changed in the future for more universal usage
 scrollUpBtn.addEventListener("click", scrollUp);
-
+let contactSection = document.querySelector('.footer')
 let aboutSection = document.querySelector('.about')
 let serviceSection = document.querySelector('.services')
 let teamSection = document.querySelector('.team')
 let homeBtn = document.querySelectorAll('.homeBtn');
 let aboutBtn = document.querySelectorAll('.aboutBtn');
 let serviceBtn = document.querySelectorAll('.serviceBtn')
-
+let contactBtn = document.querySelectorAll('.contactBtn')
 let teamBtn = document.querySelectorAll('.teamBtn')
-let myArray = [];
-myArray[0] = homeBtn;
-myArray[1] = aboutBtn;
-myArray[2] = serviceBtn;
-myArray[3] = teamBtn;
+let seeMoreBtn = document.querySelector('.seeMore')
 
-myArray.forEach(el => {
-  addEventListener('click', () => {
-    const yOffset = -200;
-    teamBtn.forEach(() => {
-      const yOffset = -200;
-      const z =
-        teamSection.getBoundingClientRect().top +
-        window.pageYOffset +
-        yOffset;
-      window.scrollTo({ top: z})
-    });
-    serviceBtn.forEach(() => {
-      const yOffset = -200;
-      const x = serviceSection.getBoundingClientRect().top + window.pageYOffset + yOffset
-      window.scrollTo({ top: x})
-      //serviceSection.scrollIntoView();
-    });
-
-  })
+homeBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    window.scrollTo(top)
+  });
+});
+serviceBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    serviceSection.scrollIntoView()
+  });
+});
+aboutBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    aboutSection.scrollIntoView()
+  });
+});
+teamBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    teamSection.scrollIntoView()
+  });
+});
+contactBtn.forEach(el => {
+  el.addEventListener('click', () => {
+    contactSection.scrollIntoView()
+  });
+});
+seeMoreBtn.addEventListener('click', () => {
+  serviceSection.scrollIntoView()
 })
-
+//removes element after specified time
+//currently removes loader
+const removeLoader = () => {
+  let loader = document.querySelector('.loader');
+    setTimeout(() => {
+      loader.remove();
+    }, 2000)
+  }
 ////event listener with all functions that will be loaded on load
 addEventListener("load", () => {
   checkCurrentPos();
+  removeLoader();
 });
+

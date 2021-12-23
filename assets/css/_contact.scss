@@ -5,19 +5,18 @@
   background-color: #111111;
   min-height: 30vh;
   color: $text-100;
-
+  position: relative;
   .footer-category {
     padding: 0;
     margin: auto;
+    z-index: 3;
     font-family: $global-font;
     .footer-heading {
       font-size: 6vh;
       text-align: center;
-      padding: 0;
     }
 
     .footer-subheading {
-      white-space: pre-line;
       text-transform: uppercase;
       color: gray;
       padding: 0;

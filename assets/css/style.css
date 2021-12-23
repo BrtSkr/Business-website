@@ -245,10 +245,9 @@
   text-align: center;
   color: black;
   display: block;
-  min-height: 70vh;
+  min-height: 80vh;
   width: 100%;
-  margin: auto;
-  transform: translateY(-5vh);
+  margin-top: -5vh;
   z-index: 4;
   font-family: "readex";
   padding: 5vh 1vh; }
@@ -320,6 +319,19 @@
   font-family: sans-serif;
   overflow: hidden; }
 
+.team::before {
+  content: "";
+  background: url(../images/undraw_designer_girl_re_h54c.svg) no-repeat;
+  opacity: 0.3;
+  background-position: center;
+  background-size: 200%;
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+  z-index: -3; }
+
 .team-flex {
   display: flex;
   flex-wrap: wrap;
@@ -345,6 +357,7 @@
   padding: 1vh; }
 
 .team-flex > div {
+  background-color: white;
   padding: 1vh;
   max-height: 100vh;
   box-shadow: 0 1px 10px 5px rgba(59, 59, 59, 0.363);
@@ -493,17 +506,17 @@
   flex-wrap: wrap;
   background-color: #111111;
   min-height: 30vh;
-  color: white; }
+  color: white;
+  position: relative; }
   .footer-flex .footer-category {
     padding: 0;
     margin: auto;
+    z-index: 3;
     font-family: "readex"; }
     .footer-flex .footer-category .footer-heading {
       font-size: 6vh;
-      text-align: center;
-      padding: 0; }
+      text-align: center; }
     .footer-flex .footer-category .footer-subheading {
-      white-space: pre-line;
       text-transform: uppercase;
       color: gray;
       padding: 0;
@@ -591,3 +604,29 @@ img {
 .scroll-up:hover {
   opacity: 0.8;
   transition: 0.5s; }
+
+.loader {
+  min-width: 100%;
+  height: 100vh;
+  background-color: #111;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  position: fixed;
+  z-index: 50; }
+
+.loader-img {
+  background: url(../images/loaderImage.webp);
+  background-size: 100%;
+  background-color: #111;
+  margin: auto;
+  height: 25vh;
+  width: 25vh;
+  animation: spin 1.5s ease-in-out;
+  animation-iteration-count: 2; }
+
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
