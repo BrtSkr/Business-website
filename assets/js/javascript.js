@@ -21,83 +21,101 @@ function checkCurrentPos() {
       navMobileFixed.style.top = "-25vh";
       console.log("navbar-fixed and scrollUpBtn are now hidden");
     }
-    console.log(currentPos);
+    //console.log(currentPos);
   }, 2000);
 }
+
+//Scrolls to top of the webpage (used for scroll up button)
 function scrollUp() {
   window.scrollTo(top);
 }
 
-let navSlide = document.querySelector(".nav-slide");
-const openNav = () => {
-  navSlide.style.top = "0%";
-};
-const closeNav = () => {
-  navSlide.style.top = "100%";
-  console.log("worked");
-};
+slidingElement = document.querySelector(".nav-slide");
+openButton = document.querySelectorAll(".nav-mbtn");
+closeButton = document.querySelector(".nav-close");
 
-let closeBtn = document.querySelector(".nav-close");
-let navMobileBtn = document.querySelectorAll(".nav-mbtn");
+class NavSlide {
+  constructor(slideElement, openNavBtn, closeBtn) {
+    this.slideElement = slideElement;
+    this.openNavBtn = openNavBtn;
+    this.closeBtn = closeBtn;
+  }
+  openNav() {
+    this.slideElement.style.top = "0%";
+  }
+  closeNav() {
+    this.slideElement.style.top = "100%";
+    console.log("worked");
+  }
+}
 
-navMobileBtn.forEach((el) => {
-  el.addEventListener("click", openNav, false);
+let slideNav = new NavSlide(slidingElement, openButton, closeButton);
+
+//on click close nav (mobile)
+closeButton.addEventListener("click", () => {
+  slideNav.closeNav();
 });
-closeBtn.addEventListener("click", closeNav);
+//In mobile navs for each 'menu button' adds event listener with function from class
+openButton.forEach((el) => {
+  el.addEventListener("click", () => {
+    slideNav.openNav();
+  });
+});
+
+//scroll into view to specified section on button click in navbar
+function scrollToSection() {
+  document.querySelector(".navs").addEventListener("click", (event) => {
+    const tgt = event.target.closest("button");
+    if (
+      tgt &&
+      (tgt.classList.contains("teamBtn") ||
+        tgt.classList.contains("serviceBtn") ||
+        tgt.classList.contains("contactBtn") ||
+        tgt.classList.contains("aboutBtn"))
+    ) {
+      document.getElementById(tgt.dataset.id).scrollIntoView();
+    } else if (tgt.classList.contains("homeBtn")) {
+      scrollUp();
+    }
+  });
+  document.querySelector(".header").addEventListener("click", (event) => {
+    if (event.target.classList.contains("seeMore")) {
+      document.getElementById(event.target.dataset.id).scrollIntoView();
+    }
+  });
+}
+//Lazy Loading
+const lazyLoading = new IntersectionObserver(
+  entries => {
+    entries.forEach(entry => {
+      if (entry.isIntersecting) {
+      const images = document.querySelectorAll('.images')
+        images.forEach(image => {
+        image.classList.add('show')
+      })
+      }
+  
+    
+    })
+});
+lazyLoading.observe(document.querySelector(".team"))
 
 //Event listener for scrollUpBtn (It just scrolls up to the top of the document)
 //Might be changed in the future for more universal usage
 scrollUpBtn.addEventListener("click", scrollUp);
-let contactSection = document.querySelector('.footer')
-let aboutSection = document.querySelector('.about')
-let serviceSection = document.querySelector('.services')
-let teamSection = document.querySelector('.team')
-let homeBtn = document.querySelectorAll('.homeBtn');
-let aboutBtn = document.querySelectorAll('.aboutBtn');
-let serviceBtn = document.querySelectorAll('.serviceBtn')
-let contactBtn = document.querySelectorAll('.contactBtn')
-let teamBtn = document.querySelectorAll('.teamBtn')
-let seeMoreBtn = document.querySelector('.seeMore')
 
-homeBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    window.scrollTo(top)
-  });
-});
-serviceBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    serviceSection.scrollIntoView()
-  });
-});
-aboutBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    aboutSection.scrollIntoView()
-  });
-});
-teamBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    teamSection.scrollIntoView()
-  });
-});
-contactBtn.forEach(el => {
-  el.addEventListener('click', () => {
-    contactSection.scrollIntoView()
-  });
-});
-seeMoreBtn.addEventListener('click', () => {
-  serviceSection.scrollIntoView()
-})
-//removes element after specified time
-//currently removes loader
+// removes element after specified time
+// currently removes loader
 const removeLoader = () => {
-  let loader = document.querySelector('.loader');
-    setTimeout(() => {
-      loader.remove();
-    }, 2000)
-  }
-////event listener with all functions that will be loaded on load
+  let loader = document.querySelector(".loader");
+  setTimeout(() => {
+    loader.remove();
+  }, 2000);
+};
+
+//event listener with all functions that will be loaded on load
 addEventListener("load", () => {
   checkCurrentPos();
   removeLoader();
+  scrollToSection();
 });
-

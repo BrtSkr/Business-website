@@ -177,7 +177,7 @@ img {
   height: 25vh;
   width: 25vh;
   animation: spin 1.5s ease-in-out;
-  animation-iteration-count: 2;
+  animation-iteration-count: infinite;
 }
 
 @keyframes spin {

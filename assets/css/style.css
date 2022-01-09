@@ -151,13 +151,13 @@
   opacity: 0.7;
   transition: 0.5s; }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 740px), screen and (min-height: 1130px) {
   .navbar-main {
     display: none; }
   .navbar-fixed {
     display: none; } }
 
-@media only screen and (min-width: 740px) {
+@media only screen and (min-width: 741px) {
   .nav-slide {
     display: none; }
   .navbar-mobile {
@@ -394,6 +394,14 @@
   max-width: 32vh;
   color: #404040; }
 
+.images {
+  display: none;
+  opacity: 0; }
+
+.show {
+  display: block;
+  opacity: 1; }
+
 .about {
   background-color: #fc6161;
   background-attachment: fixed;
@@ -623,7 +631,7 @@ img {
   height: 25vh;
   width: 25vh;
   animation: spin 1.5s ease-in-out;
-  animation-iteration-count: 2; }
+  animation-iteration-count: infinite; }
 
 @keyframes spin {
   0% {

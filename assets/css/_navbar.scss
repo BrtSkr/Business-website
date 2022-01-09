@@ -153,7 +153,7 @@
   transition: 0.5s;
 }
 
-@media only screen and (max-width: 740px) {
+@media only screen and (max-width: 740px), screen and (min-height: 1130px) {
   .navbar-main {
     display: none;
   }
@@ -161,7 +161,7 @@
     display: none;
   }
 }
-@media only screen and(min-width: 740px) {
+@media only screen and(min-width: 741px) {
   .nav-slide {
     display: none;
   }
