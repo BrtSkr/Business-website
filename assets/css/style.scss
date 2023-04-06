@@ -1,3 +1,10 @@
+@import './about';
+@import './contact';
+@import './header';
+@import './navbar';
+@import './services';
+@import './team';
+@import './variables.scss';
 //This file contains all of the universal classes, variables
 //and also contains some of the styles that do not belong in certain places like about section etc.
 @font-face {
@@ -5,63 +12,9 @@
   src: url(../fonts/ReadexPro-Regular.ttf) format("truetype");
 }
 
-//fonts
-$global-font: "readex";
-$global-font2: "Open Sans";
 
-//colors
-$accent-400: hsla(201, 44%, 59%, 0.4);
-$accent-500: hsl(201, 44%, 59%);
-$accent-600: hsl(18, 36%, 51%);
-$neutral-100: hsl(0, 0%, 87%);
-$neutral-500: hsl(212, 14%, 19%);
-$neutral-600: hsl(228, 19%, 5%);
-$neutral-700: hsl(210, 3%, 13%);
-$scrollbar: rgb(95, 95, 95);
-$scrollbar-thumb: rgba(0, 0, 0, 0.5);
-
-//text colors
-$text-100: hsl(0, 0%, 100%);
-$text-200: hsl(0, 0%, 0%);
-$text-300: hsl(0, 0%, 25%);
-
-//shadows
-$shadow-100: hsl(0, 0%, 25%);
-$shadow-200: hsl(0, 0%, 100%);
-
-//gradients
-$gradient-100: linear-gradient(
-  90deg,
-  rgba(230, 230, 230, 1) 0%,
-  rgba(51, 51, 51, 1) 50%,
-  rgba(230, 230, 230, 1) 100%
-);
-$gradient-200: linear-gradient(
-  to right,
-  var(--clr-neutral-800),
-  var(--clr-accent-600),
-  var(--clr-neutral-900),
-  var(--clr-neutral-800)
-);
-$gradient-300: linear-gradient(
-  180deg,
-  rgba(102, 102, 102, 1) 0%,
-  rgba(128, 233, 81, 1) 50%,
-  rgba(124, 124, 124, 1) 100%
-);
-$gradient-400: linear-gradient(
-  277deg,
-  rgba(82, 82, 82, 1) 0%,
-  rgba(42, 42, 42, 1) 50%,
-  rgba(88, 88, 88, 1) 100%
-);
 //imported scss files
-@import "./navbar";
-@import "./header";
-@import "./services";
-@import "./team";
-@import "./about";
-@import "./contact";
+
 
 %header {
   font-size: 2.5rem;
